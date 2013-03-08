@@ -1,0 +1,260 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1,IE=EmulateIE7"> 
+ <meta name="viewport" content="width = device-width, initial-scale=1, maximum-scale=1"/>
+ <meta name="description" content="Galeria desarrollada en html5 y css3">
+ <meta property="og:title" content="Galeria html5 css3" />
+ <meta property="og:type" content="Galeria" />
+ <meta property="og:url" content="http://Galeria.com/"/>
+ <meta property="og:image" content="#" />
+ <meta property="og:site_name" content="Galeria.com" />
+ <title>Galeria</title>
+ <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+ <![endif]--> 
+<!--[if lt IE 8]> <mce:script src="http://ie7-js.googlecode.com/svn/version/2.0(beta3)/IE8.js" mce_src="http://ie7-js.googlecode.com/svn/version/2.0(beta3)/IE8.js" type="text/javascript"></mce:script>
+<![endif]-->
+<!--[if lt IE 7]>
+<mce:script src="http://ie7-js.googlecode.com/svn/version/2.0(beta3)/IE7.js" mce_src="http://ie7-js.googlecode.com/svn/version/2.0(beta3)/IE7.js" type="text/javascript"></mce:script> <![endif]-->
+	<script type="text/javascript" src="../lib/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="../source/jquery.fancybox.js?v=2.1.3"></script>
+     <link href="stylo.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="syle.css" />
+	<link rel="stylesheet" type="text/css" href="../source/jquery.fancybox.css?v=2.1.2" media="screen" />
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.fancybox').fancybox();
+			$(".fancybox-effects-a").fancybox({
+				helpers: {
+					title : {
+						type : 'outside'
+					},
+					overlay : {
+						speedOut : 0
+					}
+				}
+			});
+			$(".fancybox-effects-b").fancybox({
+				openEffect  : 'none',
+				closeEffect	: 'none',
+
+				helpers : {
+					title : {
+						type : 'over'
+					}
+				}
+			});
+
+			$(".fancybox-effects-c").fancybox({
+				wrapCSS    : 'fancybox-custom',
+				closeClick : true,
+
+				openEffect : 'none',
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					overlay : {
+						css : {
+							'background' : 'rgba(238,238,238,0.85)'
+						}
+					}
+				}
+			});
+			$(".fancybox-effects-d").fancybox({
+				padding: 0,
+
+				openEffect : 'elastic',
+				openSpeed  : 150,
+
+				closeEffect : 'elastic',
+				closeSpeed  : 150,
+
+				closeClick : true,
+
+				helpers : {
+					overlay : null
+				}
+			});
+
+			$('.fancybox-buttons').fancybox({
+				openEffect  : 'none',
+				closeEffect : 'none',
+
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					buttons	: {}
+				},
+
+				afterLoad : function() {
+					this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+				}
+			});
+
+			$('.fancybox-thumbs').fancybox({
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+				arrows    : false,
+				nextClick : true,
+
+				helpers : {
+					thumbs : {
+						width  : 50,
+						height : 50
+					}
+				}
+			});
+
+			$('.fancybox-media')
+				.attr('rel', 'media-gallery')
+				.fancybox({
+					openEffect : 'none',
+					closeEffect : 'none',
+					prevEffect : 'none',
+					nextEffect : 'none',
+
+					arrows : false,
+					helpers : {
+						media : {},
+						buttons : {}
+					}
+				});
+
+			$("#fancybox-manual-a").click(function() {
+				$.fancybox.open('1_b.jpg');
+			});
+
+			$("#fancybox-manual-b").click(function() {
+				$.fancybox.open({
+					href : 'iframe.html',
+					type : 'iframe',
+					padding : 5
+				});
+			});
+
+			$("#fancybox-manual-c").click(function() {
+				$.fancybox.open([
+					{
+						href : '1_b.jpg',
+						title : 'My title'
+					}, {
+						href : '2_b.jpg',
+						title : '2nd title'
+					}, {
+						href : '3_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+
+
+		});
+	
+ $(function() {
+$(".image").click(function() {
+
+var image = $(this).attr("rel");
+
+$('#image').hide();
+$('#image').fadeIn('fast');
+$('#image').html('<img src="' + image + '"/>');
+	});
+});
+</script>	
+    
+</head> 
+<body>	
+	<div id="slider">
+    <div id="page-flip">
+			<div id="r1">
+                        <div id="p1">
+                          <div>
+                            <div>
+                            </div>
+                          </div>
+                        </div>
+            </div>
+         
+        <div class="s">
+                <div id="s3">
+                    <div id="sp3">
+                    </div>
+                </div>
+            </div>
+			<div id="r3">
+                <div id="p3">
+                   <div>                    
+                    <article class='slider switch switch-three'>
+
+  <input id="1" checked='' rel="img/p1.JPG" class ='image slide1' name='thumbnail' type='radio' onClick="location.href='#one'"/>
+  <input id="2" rel="img/p2.JPG" class='image slide2' name='thumbnail' type='radio' onClick="location.href='#two'"/>
+  <input  id="3" rel="img/p3.JPG" class='image slide3' name='thumbnail' type='radio' onClick="location.href='#three'" />  
+  <input id="4" rel="img/p4.JPG" class='image slide4' name='thumbnail' type='radio' onClick="location.href='#four'" />
+  <input id="5" rel="img/p5.JPG" class='image slide5' name='thumbnail' type='radio' onClick="location.href='#five'" />
+  <input id="6" rel="img/p6.JPG" class='image slide6' name='thumbnail' type='radio' onClick="location.href='#six'" />
+  <input id="7" rel="img/p7.JPG" class='image slide7' name='thumbnail' type='radio' onClick="location.href='#seven'"/>
+  <input id="8" rel="img/p8.JPG" class='image slide8' name='thumbnail' type='radio' onClick="location.href='#eigth'" />
+  <section class='images'></section> 
+</article>          
+                   <div></div>
+      
+                    </div>
+                </div>
+            </div>
+        <div id="p2">
+                <div>
+                  <article id="image">
+                <img src="img/p1.JPG" border="0"/>
+                 </article>
+                <article class='slider switch switch-three'>
+                <label for="1">GERENCIA ESTRATEGICA DE PROYECTOS</label><br> 
+                 <label for="2">CERTIFICACION CCNA</label><br>	
+                <label for="3">ITIL FOUNDATION V3</label><br>	
+                <label for="4">INGENIERÍA BIOMÉDICA</label><br>
+                <label for="5">PENTAHO</label><br> 
+                <label for="6">SALUD OCUPACIONAL</label><br>
+                <label for="7">INTELIGENCIA EMOCIONAL</label><br>
+                <label for="8">USO Y MANEJO DE LINUX</label><br>
+                </article>    
+                 </div>
+            </div>  
+      
+<article id="fun">
+        <a  href='0_b.jpg' class="fancybox"  data-fancybox-group="gallery" title=""></a>
+        <a  id="one" class="fancybox" href="1_b.jpg" data-fancybox-group="gallery" title="GERENCIA ESTRATEGICA DE PROYECTOS"></a> 
+        <a id="two" class="fancybox" href="2_b.jpg" data-fancybox-group="gallery" title="CERTIFICACION CCNA"></a>
+		<a id="three"class="fancybox" href="3_b.jpg" data-fancybox-group="gallery" title="ITIL FOUNDATION V3"></a>
+		<a id="four" class="fancybox" href="4_b.jpg" data-fancybox-group="gallery" title="INGENIERÍA BIOMÉDICA"></a>
+        <a id="five" class="fancybox" href="5_b.jpg" data-fancybox-group="gallery" title="PENTAHO"></a>
+        <a id="six" class="fancybox" href="6_b.jpg" data-fancybox-group="gallery" title="SALUD OCUPACIONAL"></a>
+        <a id="seven" class="fancybox" href="7_b.jpg" data-fancybox-group="gallery" title="INTELIGENCIA EMOCIONAL"></a>
+        <a id="eigth" class="fancybox" href="8_b.jpg" data-fancybox-group="gallery" title="USO Y MANEJO DE LINUX"></a>     
+</article>
+
+		</div>
+	</div>
+    
+</body>
+</html>
+
+
+
+

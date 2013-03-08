@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="description" content="JUEGO DE NAVES" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>nuevo</title>
+<link rel="shortcut icon" href="icono.ico" />
+<link type="text/css" rel="stylesheet" href="/gestor/css/style.css" />
+<link type="text/css" rel="stylesheet" href="/gestor/css/style2.css" />
+</head>
+<body>
+
+   <form method="post" action="control.php" name="f1">
+  <h1>USUARIO NUEVO</h1>
+  <div class="inset">
+  <p>
+    <label for="email">NICK</label>
+    <input type="text" name="nick" id="email" required>
+  </p>
+  <p>
+    <label for="password">PASSWORD</label>
+    <input type="password" name="pass" id="password" required>
+
+      <label for="pp">REPITA PASSWORD</label>
+      <input type="password" name="pp" id="pp" required>
+ </p>
+  <p>
+    <input type="checkbox" onClick="comprobarClave()" name="remember" id="remember" required>
+    <label for="remember">ACEPTO TERMINOS...</label>
+  </p>
+  </div>
+  <p class="p-container">
+		<span>TERMINOS:<a href="#"> XXXXXX</a></span>
+    <input type="submit" name="enviar" id="go" value="CREAR" onclick="document.getElementById('password').disabled = false;" >
+  </p>
+<script>
+    function comprobarClave() {
+        pass = document.f1.pass.value
+        pp = document.f1.pp.value
+
+         if (pass == pp && pass !=""){//validacion de contraseñas(si son = y difenete de null)
+           document.getElementById('password').disabled = true;//desabilitar los campos de password
+           document.getElementById('pp').disabled = true;
+    }
+        else {//si clases son diferentes entonces:
+            history.go(0);//reload
+            alert("Las dos claves son distintas...\n intentalo otravez");
+        }
+    }
+
+</script> 
+</form>   
+    </body>
+</html>
+
+
+
+

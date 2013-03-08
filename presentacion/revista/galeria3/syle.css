@@ -1,0 +1,164 @@
+ body {
+    margin: 0;
+    padding: 0;
+}
+
+#page-flip {/*donde se activa el pasa hojas contenido secundario*/
+    background: peru;
+    height: 450px;
+    overflow: hidden;
+    margin-left: 50px;
+    margin-top: 10px;
+    padding: 10px 0px 0px 320px;
+    position: absolute;
+    width: 300px;
+}
+#page-flip:hover #p1 > div {/*hover q desaparece portada(pagina1)*/
+    -webkit-transform-origin: 285px 0;
+    -webkit-transform: translate(1285px, 500px) rotate(0deg);
+}
+#page-flip:hover #p3 > div {/*hover q muestra pagina2(pagina2)*/
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: translate(1000px, 500px) rotate(0deg);
+}
+#page-flip:hover #r1 {/*hover q esconde pagina1 y lo hubica al desplazarce(pagina1)*/
+    -webkit-transform-origin: 1570px 500px;
+    -webkit-transform: translate(-1285px, -500px) rotate(0deg);
+}
+#page-flip:hover #r3 {/*hover q esconde pagina2 y lo hubica al desplazarce(pagina2)*/
+    -webkit-transform-origin: 1570px 500px;
+    -webkit-transform: translate(-1285px, -500px) rotate(0deg);
+}
+#page-flip:hover #s2 {/*suabisa la hoja doblada*/
+    -webkit-transform-origin: 300px 500px;
+    -webkit-transform: translate(-15px, -500px) rotate(0deg);
+}
+#page-flip:hover #s3 {/*camufla la sombra de la hoja doblada*/
+    -webkit-transform-origin: 325px 500px;
+    -webkit-transform: translate(-40px, -500px) rotate(0deg) translate(40px, 0);
+} 
+#page-flip:hover #s4 { /*desaparece rastros de efectos en la pagina3(pagina3)*/
+     opacity: 0; 
+ } 
+#page-flip:hover #sp3 { /*tmaño de esquina al doblar hoja1 (pagina2)*/
+     width: 11px;  
+ }
+#p0 {/*pagina0*/
+ background-image: url(http://www.fondosdepantalla.biz/images/wallpapers/629_14-896278.jpeg);
+ height: 388px;
+ width: 285px;
+ margin-left: -285px;    
+ position: absolute;
+}
+#p1 {
+    height: 1388px;
+    overflow: hidden;
+    width: 1285px;
+}
+
+#p1 > div { /*pagina1*/
+    background-image: url(http://foro.ucoz.es/rizne_5/rizne_5-52.png);
+    height: 388px;
+    width: 285px;
+    -webkit-transform-origin: 285px 0;
+    -webkit-transform: translate(1030px, 500px) rotate(32deg);
+    -webkit-transition-duration: 1s;
+    -webkit-transition-property: -webkit-transform, -webkit-transform-origin;
+}
+
+#p1 > div > div {/*borde de pagina1*/
+    background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .25)), to(rgba(0,0,0,0)));
+    height: 388px;
+    width: 10px;
+    background: #fff;
+}
+
+#p2 > div {  /*pagina3*/
+    background-image: url(http://cssdeck.com/uploads/media/items/4/4FpEEbu.jpg);
+    height: 388px;
+    position: absolute;
+    width: 285px;
+    z-index: 1;
+    -webkit-box-shadow: 0 0 11px rgba(0, 0, 0, .5);
+}
+
+#p3 {/*pagina2*/
+    height: 1388px;
+    overflow: hidden;
+    width: 1285px;
+}
+
+#p3 > div {/*pagina2*/
+    background-image: url(http://cssdeck.com/uploads/media/items/6/6S8oF28.jpg);
+    height: 388px;
+    overflow: hidden;
+    width: 285px;
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: translate(1255px, 500px) rotate(-32deg);
+    -webkit-transition-property: -webkit-transform, -webkit-transform-origin;
+    -webkit-transition-duration: 1s;
+    -webkit-box-shadow: 0 0 11px rgba(0, 0, 0, .5);
+}
+
+#p3 > div > div {/*pagina2*/
+    background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(0,0,0,.20)));
+    float: right;
+    height: 500px;
+    width: 9px;
+}
+#r1 {/*pagina1*/
+    position: absolute;
+    z-index: 2;
+    -webkit-transform-origin: 1315px 500px;
+    -webkit-transform: translate(-1030px, -500px) rotate(-32deg);
+    -webkit-transition-duration: 1s;
+    -webkit-transition-property: -webkit-transform, -webkit-transform-origin;
+}
+#r3 {/*pagina3*/
+    position: absolute;
+    z-index: 2;  
+    -webkit-transform-origin: 1315px 500px;
+    -webkit-transform: translate(-1030px, -500px) rotate(-32deg);
+    -webkit-transition-property: -webkit-transform, -webkit-transform-origin;
+    -webkit-transition-duration: 1s;
+}
+ #s2 {/*dobles*/
+    position: absolute;
+    -webkit-transform-origin: 45px 500px;
+    -webkit-transform: translate(240px, -500px) rotate(-32deg);
+    -webkit-transition-property: -webkit-transform, -webkit-transform-origin;
+    -webkit-transition-duration: 1s;
+}
+#s3 {/*visivilidad de pagina2 y borde exterior*/
+    position: absolute;
+    z-index: 1;
+    -webkit-transform-origin: 70px 500px;
+    -webkit-transform: translate(215px, -500px) rotate(-32deg) translate(40px, 0);
+    -webkit-transition-property: -webkit-transform, -webkit-transform-origin;
+    -webkit-transition-duration: 1s;   
+}
+#s4 {/*visibilidad de pagina1 duracion del pincipio de dobles*/
+    opacity: 1;
+    -webkit-transition-duration: 0.5s;
+}
+ #sp2 {/*dobles*/
+    background: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, .18)), to(rgba(0,0,0,0)));
+    height: 1000px;
+    overflow: hidden;
+    width: 15px;
+}
+#sp3 {/*sonbra de dobles*/
+    background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .25)), to(rgba(0,0,0,0)));
+    height: 1000px;
+    overflow: hidden;
+    width: 25px;
+    -webkit-transition-duration: 1s;
+    -webkit-transition-property: width;
+}
+.s {/*dobles de hoja*/
+    height: 388px;
+    overflow: hidden;
+    position: absolute;
+    width: 285px;
+    z-index: 3;
+}

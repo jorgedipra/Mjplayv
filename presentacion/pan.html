@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+        <ul>
+  <li class="pendulum-1"></li>
+  <li class="pendulum-2"></li>
+  <li class="pendulum-3"></li>
+  <li class="pendulum-4"></li>
+  <li class="pendulum-5"></li>
+  <li class="pendulum-6"></li>
+  <li class="pendulum-7"></li>
+  <li class="pendulum-8"></li>
+  <li class="pendulum-9"></li>
+  <li class="pendulum-10"></li>
+  <li class="pendulum-11"></li>
+  <li class="pendulum-12"></li>
+  <li class="pendulum-13"></li>
+  <li class="pendulum-14"></li>
+  <li class="pendulum-15"></li>
+  <li class="pendulum-16"></li>
+  <li class="pendulum-17"></li>
+  <li class="pendulum-18"></li>
+  <li class="pendulum-19"></li>
+  <li class="pendulum-20"></li>
+  <li class="pendulum-21"></li>
+  <li class="pendulum-22"></li>
+  <li class="pendulum-23"></li>
+  <li class="pendulum-24"></li>
+  <li class="pendulum-25"></li>
+</ul>
+    </body>
+</html>
+<style>
+    html, body {
+  background-color:#222222;
+}
+
+ul {
+  width:350px;
+  overflow:hidden;
+  margin:0 auto;
+  margin-top:10px;
+  border-radius:10px;
+  padding-left:5px;
+  padding-right:5px;
+  margin-bottom:5px;
+}
+
+li {
+  height:8px;
+  width:8px;  
+  margin-top:5px;  
+  background-color:#f5f5f5;
+  border-radius:10px;
+  display: block;
+  
+  animation-name: slide;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; 
+}
+
+@for $i from 1 through 25 {
+  .pendulum-#{$i} {
+    animation-duration: 10 / $i + s;
+  }
+}
+
+@keyframes slide {
+   0% { transform: translateX(0px); }
+   100% { transform: translateX(345px); }   
+}
+</style>

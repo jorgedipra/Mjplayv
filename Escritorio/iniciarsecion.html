@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+   <!--[if gte IE 9]>
+  <style type="text/css">
+    .gradient {
+       filter: none;
+    }
+  </style>
+<![endif]-->
+<title>Iniciando...</title>
+<link rel="shortcut icon" href="/imagenes/icono.ico" />
+<script type="text/javascript" src="http://contadores.miarroba.es/ver.php?id=667398"></script>
+<img src="/imagenes/Esescri/inicio.jpg" style="display: none">
+<style>
+html{
+margin:0;
+padding:0;
+width:10%;
+height:13.5%;
+}
+body{
+background: #4c4c4c; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  #4c4c4c 0%, #595959 12%, #666666 25%, #474747 39%, #2c2c2c 50%, #000000 51%, #111111 60%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#4c4c4c), color-stop(12%,#595959), color-stop(25%,#666666), color-stop(39%,#474747), color-stop(50%,#2c2c2c), color-stop(51%,#000000), color-stop(60%,#111111), color-stop(76%,#2b2b2b), color-stop(91%,#1c1c1c), color-stop(100%,#131313)); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* IE10+ */
+background: radial-gradient(ellipse at center,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+margin:100%;
+padding:0;
+width:100%;
+height:100%;
+}
+
+::selection{text-shadow:0 0 20px #017ecd,1px 1px 1px #808080}
+.aro{
+	width: 350px;
+	height: 160px;
+    position:fixed;
+	top:35%;
+	left: 30%;
+}
+
+	@-webkit-keyframes giro_aro_interior {  
+		from { -webkit-transform: rotate(0deg) }
+		to   { -webkit-transform: rotate(360deg) }
+	}
+	@-moz-keyframes giro_aro_interior {  
+		from { -moz-transform: rotate(0deg) }
+		to   { -moz-transform: rotate(360deg) }
+	}
+	@keyframes giro_aro_interior {
+		from { transform: rotate(0deg) }
+		to   { transform: rotate(360deg) }
+	}
+
+.aro_interior{
+	width: 120px;
+	height: 120px;
+	overflow: hidden;
+	z-index:120;
+	position:absolute;
+	top: 20px;
+	left: 20px;
+	animation-timing-function:linear;
+	-moz-animation-timing-function:linear; 
+	-webkit-animation-timing-function:linear; 
+	animation-name: giro_aro_interior;
+	-moz-animation-name: giro_aro_interior;
+	-webkit-animation-name: giro_aro_interior;
+	animation-duration: 3s;
+	-moz-animation-duration: 3s;
+	-webkit-animation-duration: 3s;
+	animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+
+.caja_arco_interior {	width: 50px; height: 50px; 	overflow: hidden; margin: 5px; }	
+.arco_interior1 {width: 50px;	height: 50px;	border: 14px solid #ccc;	border-radius: 50%;	position: relative;	top: 15px; left: 15px; }	
+.arco_interior2 {	width: 50px;	height: 50px;	border: 14px solid #ccc;	border-radius: 50%;	position: relative;	top: 15px;	left: -43px;}	
+.arco_interior3 {	width: 50px;	height: 50px;	border: 14px solid #ccc;	border-radius: 50%;	position: relative;	top: -44px;	left: 15px;}	
+.arco_interior4 {	width: 50px;	height: 50px;	border: 14px solid #ccc;	border-radius: 50%;	position: relative;	top: -44px;	left: -43px;}	
+
+	@-webkit-keyframes giro_aro_exterior {  
+		from { -webkit-transform: rotate(45deg) }
+		to   { -webkit-transform: rotate(-320deg) }
+	}
+	@-moz-keyframes giro_aro_exterior {  
+		from { -moz-transform: rotate(45deg) }
+		to   { -moz-transform: rotate(-320deg) }
+	}
+	@keyframes giro_aro_exterior {
+		from { transform: rotate(45deg) }
+		to   { transform: rotate(-320deg) }
+	}
+
+.aro_exterior{
+	width: 160px;
+	height: 160px;
+	overflow: hidden;
+	z-index:100;
+	animation-timing-function:linear;
+	-moz-animation-timing-function:linear; 
+	-webkit-animation-timing-function:linear; 
+	animation-name: giro_aro_exterior;
+	-moz-animation-name: giro_aro_exterior;
+	-webkit-animation-name: giro_aro_exterior;
+	animation-duration: 3s;
+	-moz-animation-duration: 3s;
+	-webkit-animation-duration: 3s;
+	animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+
+}
+
+.caja_arco_exterior {	width: 70px; height: 70px; 	overflow: hidden; margin: 5px; }	
+.arco_exterior1 {width: 70px;	height: 70px;	border: 18px solid #666;	border-radius: 50%;	position: relative;	top: 24px; left: 23px; }	
+.arco_exterior2 {	width: 70px;	height: 70px;	border: 18px solid #666;	border-radius: 50%;	position: relative;	top: 24px;	left: -59px; }	
+.arco_exterior3 {	width: 70px;	height: 70px;	border: 18px solid #666;	border-radius: 50%;	position: relative;	top: -60px;	left: 23px; }	
+.arco_exterior4 {	width: 70px;	height: 70px;	border: 18px solid #666;	border-radius: 50%;	position: relative;	top: -60px;	left: -59px; }	
+
+
+.texto_cargando{
+	margin-left:180px;
+    margin-top:-100px;
+	font-family: Arial, sans-serif;
+	font-size: 32px;
+	color: #999;
+	text-shadow: 0px 0px 15px rgba(0,0,0,0.8);
+}
+.aro iframe
+{
+    border:none; overflow:hidden; width:0px; height:0px;
+}
+</style>
+</head>
+<body>
+
+<div class="aro">
+	<div class="aro_exterior">
+		<div class="caja_arco_exterior" style="float: left;"><div class="arco_exterior1"></div></div>
+		<div class="caja_arco_exterior" style="float: right;"><div class="arco_exterior2"></div></div>
+		<div class="caja_arco_exterior" style="float: left;"><div class="arco_exterior3"></div></div>
+		<div class="caja_arco_exterior" style="float: right;"><div class="arco_exterior4"></div></div>
+	</div>
+	<div class="aro_interior">
+		<div class="caja_arco_interior" style="float: left;"><div class="arco_interior1"></div></div>
+		<div class="caja_arco_interior" style="float: right;"><div class="arco_interior2"></div></div>
+		<div class="caja_arco_interior" style="float: left;"><div class="arco_interior3"></div></div>
+		<div class="caja_arco_interior" style="float: right;"><div class="arco_interior4"></div></div>
+	</div>
+	<div class="texto_cargando">Iniciando...</div>
+    <iframe src="/Escritorio.html"scrolling="no" frameborder="0" allowTransparency="true">
+     </iframe>
+</div>
+
+     <META HTTP-EQUIV="Refresh" CONTENT="0.5; URL=/Escritorio/">
+</body>
+</html>

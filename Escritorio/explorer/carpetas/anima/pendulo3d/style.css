@@ -1,0 +1,8 @@
+div#foo{
+	border:none;
+	cursor:pointer;
+	max-width:100%;
+	margin:0 auto;
+	height:400px;
+	background-color:rgb(34,34,34);
+}

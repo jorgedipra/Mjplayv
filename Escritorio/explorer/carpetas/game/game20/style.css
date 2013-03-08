@@ -1,0 +1,147 @@
+#famiFrame {
+    width:286px;
+    height:106px;
+    background-color:#602;
+    border:2px solid #401;
+    padding:7px;
+    box-shadow:8px 8px 5px #000;
+    -webkit-box-shadow:5px 5px 5px #000;
+    -moz-box-shadow:5px 5px 5px #000;
+    border-radius:10px;
+    -moz-border-radius:10px;
+}
+#innerFrameTop {
+    position:relative;
+    width:120px;
+    height:53px;
+    border-radius:3px 3px 0 0;
+    background-color:#dca;
+}
+#innerFrameBottom {
+    position:relative;
+    height:53px;
+    background-color:#dca;
+    border-radius:0 3px 3px 3px;
+    -moz-border-radius:0 3px 3px 3px;
+}
+#controllerNumber {
+    line-height:1.1em;
+    position:absolute;
+    top:5px;
+    left:5px;
+    width:1em;
+    height:1em;
+    background-color:#000;
+    color:#dca;
+    font-size:16px;
+    font-weight:bold;
+    padding:2px;
+    border-radius:1px;
+    -moz-border-radius:1px;
+}
+#doubleLine {
+    position:absolute;
+    bottom:14px;
+    left:0;
+    width:100%;
+    height:2px;
+    border-top:2px solid #000;
+    border-bottom:2px solid #000;
+}
+#crossKey {
+    position:absolute;
+    top:-16px;
+    left:15px;
+    width:60px;
+    height:60px;
+}
+#crossKey div {
+    width:20px;
+    height:20px;
+    background-color:#000;
+    cursor:pointer;
+}
+#crossKeyUp {
+    position:absolute;
+    top:0;
+    left:20px;
+}
+#crossKeyRight {
+    position:absolute;
+    top:20px;
+    left:40px;
+}
+#crossKeyDown {
+    position:absolute;
+    top:40px;
+    left:20px;
+}
+#crossKeyLeft {
+    position:absolute;
+    top:20px;
+    left:0;
+}
+#crossKeyCenter {
+    position:absolute;
+    top:20px;
+    left:20px;
+}
+#startSelectKey {
+    position:absolute;
+    top:14px;
+    left:90px;
+    width:90px;
+    height:30px;
+    background-color:#512;
+    border-radius:15px;
+    -moz-border-radius:15px;
+}
+#startSelectKey div {
+    width:28px;
+    height:10px;
+    background-color:#000;
+    cursor:pointer;
+    border-radius:5px;
+    -moz-border-radius:5px;
+}
+#selectKey {
+    position:absolute;
+    top:10px;
+    left:10px;
+}
+#startKey {
+    position:absolute;
+    top:10px;
+    right:10px;
+}
+#abKey {
+    position:absolute;
+    top:14px;
+    right:24px;
+    width:66px;
+    height:30px;
+}
+#abKey div {
+    width:26px;
+    height:26px;
+    background-color:#000;
+    border:2px solid #423;
+    cursor:pointer;
+    border-radius:15px;
+    -moz-border-radius:15px;
+}
+#bKey {
+    position:absolute;
+    top:0;
+    left:0;
+}
+#aKey {
+    position:absolute;
+    top:0;
+    right:0;
+}
+#startSelectKey div:active,
+#abKey div:active,
+#crossKey div:active {
+    background-color:#00f;
+}

@@ -1,0 +1,30 @@
+borde cuadro
+http://cssdeck.com/labs/download-page-concept
+
+barra:
+http://cssdeck.com/labs/nice-sparkle-progress-bars
+puntos:
+http://cssdeck.com/labs/css-leds
+menu
+http://cssdeck.com/labs/css-navigation
+http://cssdeck.com/labs/skewy-navigation   ***
+logo
+http://cssdeck.com/labs/smashing-magazine-logo
+para editor web:
+http://cssdeck.com/labs/github-fork-me-on
+/*<a href="http://github.com/Roparz" target="_blank" class="forkme">Editor MJ<span>html-css-js</span></a>*/
+ventanas:
+http://cssdeck.com/labs/appearing-animation-with-css3
+jombre  o palabra -descrpction
+http://cssdeck.com/labs/css3-author-info-tooltip
+
+
+comparir mejor:
+http://cssdeck.com/labs/simple-fading-with-css3
+
+
+texto
+     http://www.useragentman.com/blog/2011/06/29/full-css3-text-shadows-even-in-ie/
+
+
+

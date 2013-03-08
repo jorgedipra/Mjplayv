@@ -1,0 +1,34 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{
+    display: block;
+}
+body{
+background:#ccc;
+}
+#mcontm, 
+#mcont {
+display: none;
+}
+#magazine a{
+height:90%;
+position:absolute;
+margin:15px 15px;
+width:90%;
+z-index:999;
+}
+#magazine a:hover{
+background:url(../img/zoom_icon.jpg);
+opacity:0.2;
+/*background-size*/
+-webkit-background-size:280px 388px;
+   -moz-background-size:280px 388px;
+     -o-background-size:280px 388px;
+        background-size:280px 388px;
+}
+#magazine .turn-page{
+background-color:#ccc;
+/*background-size*/
+-webkit-background-size:100% 100%;
+   -moz-background-size:100% 100%;
+     -o-background-size:100% 100%;
+        background-size:100% 100%;
+}

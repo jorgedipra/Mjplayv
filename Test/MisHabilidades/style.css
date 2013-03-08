@@ -1,0 +1,188 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body { background-image: url(http://subtlepatterns.com/patterns/wall4.png) }
+
+section.main {
+    margin-top: 300px;
+    position: relative;
+}
+
+span {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    color: rgb(80,80,80);
+    text-shadow: 1px 0px 0px rgb(220,220,220);
+    margin-left: 150px;
+}
+
+input[type=radio] { visibility: hidden }
+
+label {
+    width: 100px;
+    height: 30px;
+    display: inline-block;
+    background: rgba(183, 172, 172, 0.7);
+    text-align: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    color: rgb(255,255,255);
+    padding-top: 2px;
+    position: relative;
+    top: 2px;
+    cursor: pointer;
+}
+
+label:hover { background: rgba(153, 142, 142, 0.7) }
+
+input#skill-html5:checked~label[for=skill-html5] { background: rgba(123, 112, 112, 0.7) }
+
+input#skill-css3:checked~label[for=skill-css3] { background: rgba(123, 112, 112, 0.7) }
+
+input#skill-jquery:checked~label[for=skill-jquery] { background: rgba(123, 112, 112, 0.7) }
+
+section section {
+    width: 60%;
+    height: 350px;
+    margin-top: -298px;
+}
+
+input[type=radio]~section>div {
+    width: 100px;
+    height: 300px;
+    background-color: rgba(233, 222, 222, 0.5);
+    position: absolute;
+    margin-left: 600px;
+    -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,.2);
+    -moz-box-shadow: 0px 0px 3px rgba(0,0,0,.2);
+    box-shadow: 0px 0px 3px rgba(0,0,0,.2);
+}
+
+input[type=radio]~section>div>div#bar {
+    height: 0%;
+    width: 100px;
+    background-color: rgba(47, 83, 122, 0.7);
+    position: absolute;
+    bottom: 0;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+input#skill-html5:checked~section>div>div#bar {
+    height: 75%;
+    background-color: #F14A29;
+}
+
+input#skill-css3:checked~section>div>div#bar {
+    height: 95%;
+    background-color: #2AA7DF;
+}
+
+input#skill-jquery:checked~section>div>div#bar {
+    height: 30%;
+    background-color: rgb(234,192,73);
+}
+
+input[type=radio]~section>div>div#counter {
+    width: 25px;
+    height: 18px;
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+    top: 260px;
+}
+
+input[type=radio]~section>div>div#counter>div {
+    width: 25px;
+    margin: auto;
+    position: relative;
+    top: 0px;
+    z-index: 3;
+    font-family: 'Open Sans Condensed';
+    font-weight: bold;
+    color: rgb(255,255,255);
+    -webkit-transition: top 2s;
+    -moz-transition: top 2s;
+    -o-transition: top 2s;
+    transition: top 2s;
+}
+
+input#skill-html5:checked~section>div>div#counter>div {
+    position: relative;
+    top: -1628px;
+}
+
+input#skill-css3:checked~section>div>div#counter>div {
+    position: relative;
+    top: -2069px;
+}
+
+input#skill-jquery:checked~section>div>div#counter>div {
+    position: relative;
+    top: -640px;
+}
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Condensed Bold'), local('OpenSans-CondensedBold'), url(http://themes.googleusercontent.com/static/fonts/opensanscondensed/v6/gk5FxslNkTTHtojXrkp-xONSK5BxN3NFS4EJkViHIqo.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Cond Light'), local('OpenSans-CondensedLight'), url(http://themes.googleusercontent.com/static/fonts/opensanscondensed/v6/gk5FxslNkTTHtojXrkp-xF1YPouZEKgzpqZW9wN-3Ek.woff) format('woff');
+}
+@media screen and (max-width:720px){
+ section.main {
+    margin-top: 290px;
+    left:0;
+    margin-left:-140px;
+    position: relative;
+}
+}
+@media screen and (max-width:600px){
+section.main {
+    margin-top: 50px;
+    left:0;
+    margin-left:-140px;
+    position: relative;
+}
+ section section {
+    width: 200px;
+    height: 350px;
+    margin-top: 10px;
+    left:0px;
+    margin-left:-250px;
+}
+}
+@media screen and (max-width:480px){
+body {
+ width:100%; }
+section.main  span{
+    margin-top: -40px;
+    left:0;
+    margin-left:150px;
+    width:100px;
+    position:absolute;
+}
+section.main  label{
+    margin-top: -40px;
+    left:0;
+    margin-left:150px;
+    position:relative;
+    width:75%;
+}
+section section {
+    width: 100px;
+    height: 350px;
+    margin-top: 10px;
+    left:0px;
+    margin-left:-400px;
+}
+}

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title>WEB-MJvideoPlay</title>
+        <link rel="shortcut icon" href="/imagenes/icono.ico" />
+        <script src="/javascript/listahtml5.js"></script>
+        <link href="/css/estilos.css" rel="stylesheet" />
+        <link rel="stylesheet"  href="/css/style1.css" />
+        <script src="/javascript/jsmj.js"></script>
+        <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="http://clab.nodester.com/socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="http://contadores.miarroba.es/ver.php?id=667398"></script>
+         <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    
+    <section>
+        <a class="barrasuperior">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <div id="divPinSite">
+             <div id="cf4a" class="shadow">
+         <img src="/imagenes/ojos/ojosrojos.jpg" />               
+        <img src="/imagenes/ojos/ojosverdes.jpg" />     
+        <img src="/imagenes/ojos/ojosazules.jpg" /> 
+        <img src="/imagenes/ojos/ojoscafes.jpg" />     
+             </div>
+      </div>  
+
+
+         <img class="titulomj" src="/imagenes/mj.png" alt="" />  
+        
+        <action id="menup2">
+                 <a href="https://www.facebook.com/pages/Majovideoplay/227376447368257"  class="circulo"> 
+                 <img src="/imagenes/facebook-logo.png" alt="" />
+                 </a>
+                 <a href="http://www.youtube.com/user/MJVIDEOPLAY"  class="circulo"> 
+                  <img src="/imagenes/youtube-logo.png" alt="" />
+                  </a>
+                  <a href="https://twitter.com/#!/Mjvideoplay"  class="circulo"> 
+                  <img src="/imagenes/twitter-roto.png" alt="" />
+                  </a>
+                 <a href="https://plus.google.com/102520169474839934484/about"  class="circulo"> 
+                  <img src="/imagenes/Email.png" alt="" />
+                  </a>
+            </action>
+           <action>
+                
+            <div id="ex31">
+              <a class="titulo">MJ Play-V</a>
+               MJ Play-V
+              </div>  
+            
+            </action>
+        
+         <a href="/index.html" title="Home" >
+            <img class="thome" src="/imagenes/Home.gif" alt="" />   
+          </a>
+         <a href="/web.html" title="WEB" >
+            <img class="tweb" src="/imagenes/web.png" alt="" /> 
+          </a>
+        <a href="/recursos/editor-all.html" title="EDITOR HTML5" TARGET="_blank" >
+            <img class="teditor" src="/imagenes/editor.png" alt="" /> 
+          </a>
+           <action class="titulopp" >
+              <div id="trans">
+	            <div class="hover">
+                   <h1>HTML 5</h1> 
+                   </div>
+                 </div>
+            </action>
+          
+    </section>  
+    <body>
+        <section> 
+            <article>
+                
+    
+             <div id="ex4"> 
+            <div class="holder">
+    <div class="month red">
+          <script>
+         document.write("<p>"+sessionStorage.getItem('introhtml5nombre')+"</p>");
+         </script>
+    </div>
+    <div class="day">
+<script>
+   document.write("<a href='"+sessionStorage.getItem('introhtml5') +"' title='"+sessionStorage.getItem('introhtml5nombre') +"'  />"); 
+   document.write("<img  src='"+sessionStorage.getItem('introhtml5urlimagen') +"' width='200' height='180'  />");
+    document.write("<a/>Duracion del video: "+sessionStorage.getItem('introhtml5time')+"");
+</script>
+    </div>
+</div>
+
+<div class="holder">
+    <div class="month green">
+      <script>
+         document.write("<p>"+sessionStorage.getItem('videohtml5nombre')+"</p>");
+         </script>
+    </div>
+    <div class="day">
+<script>
+   document.write("<a href='"+sessionStorage.getItem('videohtml5') +"' title='"+sessionStorage.getItem('videohtml5nombre') +"'  />"); 
+   document.write("<img  src='"+sessionStorage.getItem('videohtml5urlimagen') +"' width='200' height='180'  />");
+    document.write("<a/>Duracion del video: "+sessionStorage.getItem('videohtml5time')+"");
+</script>   
+  </div>
+</div>
+
+<div class="holder">
+    <div class="month blue">
+        <script>
+         document.write("<p>"+sessionStorage.getItem('canvashtml5nombre')+"</p>");
+         </script>
+    </div>
+    <div class="day">
+<script>
+   document.write("<a href='"+sessionStorage.getItem('canvashtml5') +"' title='"+sessionStorage.getItem('canvashtml5nombre') +"'  />"); 
+   document.write("<img  src='"+sessionStorage.getItem('canvashtml5urlimagen') +"' width='200' height='180'  />");
+    document.write("<a/>Duracion del video: "+sessionStorage.getItem('canvashtml5time')+"");
+</script>
+    </div>
+</div>
+
+<div class="holder">
+    <div class="month yellow">
+         <script>
+         document.write("<p>"+sessionStorage.getItem('formularioshtml5nombre')+"</p>");
+         </script>
+    </div>
+    <div class="day">
+<script>
+   document.write("<a href='"+sessionStorage.getItem('formularioshtml5') +"' title='"+sessionStorage.getItem('formularioshtml5nombre') +"'  />"); 
+   document.write("<img  src='"+sessionStorage.getItem('formularioshtml5urlimagen') +"' width='200' height='180'  />");
+    document.write("<a/>Duracion del video: "+sessionStorage.getItem('formularioshtml5time')+"");
+</script> 
+    </div>
+</div>
+
+<div class="holder">
+    <div class="month yellow">
+        <script>
+         document.write("<p>"+sessionStorage.getItem('Geolocalizacionhtml5nombre')+"</p>");
+         </script>
+    </div>
+    <div class="day">
+<script>
+   document.write("<a href='"+sessionStorage.getItem('Geolocalizacionhtml5') +"' title='"+sessionStorage.getItem('Geolocalizacionhtml5nombre') +"'  />"); 
+   document.write("<img  src='"+sessionStorage.getItem('Geolocalizacionhtml5urlimagen') +"' width='200' height='180'  />");
+    document.write("<a/>Duracion del video: "+sessionStorage.getItem('Geolocalizacionhtml5time')+"");
+</script>
+    </div>
+</div>
+
+<div class="holder">
+    <div class="month blue">
+         <script>
+         document.write("<p>"+sessionStorage.getItem('LOCALhtml5nombre')+"</p>");
+         </script>
+    </div>
+    <div class="day">
+<script>
+   document.write("<a href='"+sessionStorage.getItem('LOCALhtml5') +"' title='"+sessionStorage.getItem('LOCALhtml5nombre') +"'  />"); 
+   document.write("<img  src='"+sessionStorage.getItem('LOCALhtml5urlimagen') +"' width='200' height='180'  />");
+    document.write("<a/>Duracion del video: "+sessionStorage.getItem('LOCALhtml5time')+"");
+</script>
+    </div>
+</div>
+<div class="holder">
+    <div class="month green">
+        <script>
+         document.write("<p>"+sessionStorage.getItem('Realhtml5nombre')+"</p>");
+         </script>
+    </div>
+    <div class="day">
+<script>
+   document.write("<a href='"+sessionStorage.getItem('Realhtml5') +"' title='"+sessionStorage.getItem('Realhtml5nombre') +"'  />"); 
+   document.write("<img  src='"+sessionStorage.getItem('Realhtml5urlimagen') +"' width='200' height='180'  />");
+    document.write("<a/>Duracion del video: "+sessionStorage.getItem('Realhtml5time')+"");
+</script> 
+ </div>
+</div>
+
+<div class="holder">
+    <div class="month red">
+         <script>
+         document.write("<p>"+sessionStorage.getItem('accesshtml5nombre')+"</p>");
+         </script>
+    </div>
+    <div class="day">
+<script>
+   document.write("<a href='"+sessionStorage.getItem('accesshtml5') +"' title='"+sessionStorage.getItem('accesshtml5nombre') +"'  />"); 
+   document.write("<img  src='"+sessionStorage.getItem('accesshtml5urlimagen') +"' width='200' height='180'  />");
+    document.write("<a/>Duracion del video: "+sessionStorage.getItem('accesshtml5time')+"");
+</script>
+    </div>
+</div>
+
+<div class="holder">
+    <div class="month red">
+        <script>
+         document.write("<p>"+sessionStorage.getItem('svghtml5nombre')+"</p>");
+         </script>
+    </div>
+    <div class="day">
+<script>
+   document.write("<a href='"+sessionStorage.getItem('svghtml5') +"' title='"+sessionStorage.getItem('svghtml5nombre') +"'  />"); 
+   document.write("<img  src='"+sessionStorage.getItem('svghtml5urlimagen') +"' width='200' height='180'  />");
+    document.write("<a/>Duracion del video: "+sessionStorage.getItem('svghtml5time')+"");
+</script>
+    </div>
+</div>
+            
+            
+            
+	          
+    
+	              </div>
+                </div>        
+            </article>
+            <action>
+                
+                     <!-- compartir con todo -->
+                <div style="display:scroll;position:fixed;bottom:170px;left:5px;">
+                    <div class="addthis_toolbox addthis_default_style ">
+                        <a class="addthis_counter addthis_pill_style"></a>
+                         </div>
+                         <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4fa00db603531594"></script>
+                 </div>
+                <!-- fin de compartir con todo -->
+                
+                <!-- BOOTON FLOTANTE DE TWIR--> 
+        
+                <div style="display:scroll;position:fixed;bottom:100px;left:5px;">  
+                 <a href="https://twitter.com/share" 
+                 class="twitter-share-button" data-text="Que buen sito :3" 
+                  data-lang="es" data-related="Mjvideoplay">Twittear</a>
+                  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if
+                  (!d.getElementById(id)){js=d.createElement(s);
+                   js.id=id;js.src="//platform.twitter.com/widgets.js";
+                   fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </div> 
+                <!-- fin BOOTON FLOTANTE DE TWIR--> 
+                
+                
+                <!-- BOOTON FLOTANTE DE ME GUSTA face-->
+        
+                <div style="position:fixed;bottom:5px;left:5px; display:scroll;">
+               <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmjplay-v.16mb.com%2F&amp;send=false&amp;layout=box_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=90&amp;appId=274073795995056" 
+               scrolling="no" frameborder="0" style="border:none; 
+               overflow:hidden; width:450px; height:90px;" allowTransparency="true">
+               </iframe>
+                </div>
+                <!-- finBOOTON FLOTANTE DE ME GUSTA face-->
+                
+                
+                <!-- boton +1 de google -->
+                
+                <div style="display:scroll;position:fixed;bottom:130px;left:5px;"> 
+                <g:plusone></g:plusone>
+                <script type="text/javascript">
+                 window.___gcfg = {lang: 'es-419'};
+
+                 (function() {
+                 var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                 po.src = 'https://apis.google.com/js/plusone.js';
+                 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                 })();
+                </script>
+                <!--fin boton +1 de google -->
+                    
+                    
+                <!--compartir en face-->
+                <div style="display:scroll;position:fixed;bottom:15px;left:5px;">  
+                <b:if cond='data:blog.pageType == &quot;item&quot;'>
+                <a href='la URL de lo que se esta compartiendo' name='fb_share' type='button_count'>Compartir</a>
+                <script src='http://static.ak.fbcdn.net/connect.php/js/FB.Share' type='text/javascript'></script>
+                </b:if>
+                </div>
+                    
+                <!--fin compartir en face-->
+
+                <!-- contadores  --> 
+        
+                <div style="display:scroll;position:fixed; top:0; right:0;">  
+                <script type="text/javascript" src="http://contadores.miarroba.es/ver.php?id=663899"></script>
+                </div>
+        
+                <!--fin de  contadores  -->
+                  </div>
+            </action>
+        </section>
+    </body>
+</html>

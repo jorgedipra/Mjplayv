@@ -1,0 +1,9 @@
+body
+{
+  background-color: #000;
+}
+#Message
+{
+  color:#FFF;
+  position:absolute; top:10px; left:10px;
+}

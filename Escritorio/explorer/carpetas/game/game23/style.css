@@ -1,0 +1,229 @@
+@font-face {
+	font-family: mplus-1p-regular;
+	src: url('http://mplus-fonts.sourceforge.jp/webfonts/mplus-1p-regular.ttf')
+     	format("truetype");
+}
+
+body { background-color: #DDDDDD; font-size:10px; font-family: mplus-1p-regular;}
+
+#loading {
+    position: absolute;
+    top:60px;
+    left:60px;
+    background-image: url(http://jsrun.it/assets/q/L/Q/U/qLQUU.gif);
+    width: 80px;
+    height: 16px;
+}
+
+canvas { 
+    background-color: #000000;	真っ黒の場合	
+    color: #FFFFFF;
+    border: 2px solid #FFF;
+    background: #000000;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    box-shadow: inset 0px 0px 5px 1px #FFFFFF;
+    -webkit-box-shadow: inset 0px 0px 5px 1px #FFFFFF;
+    -moz-box-shadow: inset 0px 0px 5px 1px #FFFFFF;
+}
+
+canvas:hover {
+    box-shadow: 0px 0px 20px #FF0000;
+    -webkit-box-shadow: 0px 0px 20px #FF0000;
+    -moz-box-shadow: 0px 0px 20px #ff0000;
+    transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+}
+
+#controller {
+	position:absolute;
+    margin:0 auto;
+    width:446px;
+	height: 40px;
+    background: #FFFFFF;
+    margin-top: -45px;
+    opacity: 0.0;	// controller in/out
+    border: 2px solid #FFF;
+    border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+    box-shadow: 3px 3px 3px rgba(000,000,000,0.5);
+	-moz-box-shadow: 3px 3px 3px rgba(000,000,000,0.5);
+	-webkit-box-shadow: 3px 3px 3px rgba(000,000,000,0.5);
+    
+    background: rgb(245,246,246); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(245,246,246,1) 0%, rgba(219,220,226,1) 21%, rgba(184,186,198,1) 49%, rgba(221,223,227,1) 80%, rgba(245,246,246,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(245,246,246,1)), color-stop(21%,rgba(219,220,226,1)), color-stop(49%,rgba(184,186,198,1)), color-stop(80%,rgba(221,223,227,1)), color-stop(100%,rgba(245,246,246,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(245,246,246,1) 0%,rgba(219,220,226,1) 21%,rgba(184,186,198,1) 49%,rgba(221,223,227,1) 80%,rgba(245,246,246,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(245,246,246,1) 0%,rgba(219,220,226,1) 21%,rgba(184,186,198,1) 49%,rgba(221,223,227,1) 80%,rgba(245,246,246,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(245,246,246,1) 0%,rgba(219,220,226,1) 21%,rgba(184,186,198,1) 49%,rgba(221,223,227,1) 80%,rgba(245,246,246,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(245,246,246,1) 0%,rgba(219,220,226,1) 21%,rgba(184,186,198,1) 49%,rgba(221,223,227,1) 80%,rgba(245,246,246,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#f5f6f6',GradientType=0 ); /* IE6-9 */
+}
+
+#controller:hover {
+    opacity: 1.0;
+    transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;	
+}
+
+#controller label {
+    font-size: 9px;
+    display:block;
+    margin: 0 auto;    
+}
+
+#controller label.arrow_up {
+    font-size: 9px;
+    vertical-align: middle;
+    text-align: center;
+    position: absolute;
+    margin-top: -15px;
+    margin-left: -1px;
+    color: #333333;
+}
+
+section.parts {
+    width: 50px;
+    float: left;
+    text-align: center;
+    margin: 1px 1px 1px 1px;
+   	border: 1px solid #cccccc;
+    height: 36px;
+}
+
+#controller label.arrow_down {
+    font-size: 9px;
+    vertical-align: middle;
+    text-align: center;
+    position: absolute;
+    margin-top: -14px;
+    margin-left: -1px;
+    color: #333333;
+}
+
+button {
+	background-color: #00FF00;
+	border: solid 1px #933;
+    background-image: -moz-linear-gradient(-90deg,rgba(255, 255, 255, 0.9),rgba(255, 255, 255, 0));
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0,rgba(255, 255, 255, 0.9)), color-stop(1,rgba(255, 255, 255, 0)));
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.6);
+    -webkit-transition: background-color, .5s;
+    -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+    color: #333;
+}
+
+button:hover {
+    background-color: orange;
+	cursor: pointer;
+}
+
+button label#play_stop {
+	font-size: 14px;
+}
+
+button label:hover {
+    cursor: pointer;
+}
+
+button:active {
+    position: relative;
+    top:1px;
+	box-shadow : 0 2px 2px #777; /* CSS3 */
+  	-webkit-box-shadow: 0 2px 2px #777; /* chrome, safari */
+  	-moz-box-shadow   : 0 2px 2px #777; /* firefox */
+}
+
+.button_circle {
+    margin: 0px 2px 2px 0px;
+    /* float: left; */
+    background-color: #E00;
+	border: solid 1px #933;
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    background-image: -moz-linear-gradient(-90deg,rgba(255, 255, 255, 0.9),rgba(255, 255, 255, 0));
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0,rgba(255, 255, 255, 0.9)), color-stop(1,rgba(255, 255, 255, 0)));
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.6);
+    -webkit-transition: background-color, .5s;
+    -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+    color: #333;
+    text-decoration: none;
+    text-align: center;
+    line-height: 30px;
+    width: 20px;
+    height: 20px;
+}
+
+.button_circle:hover {
+	background-color: orange;
+    cursor: pointer;
+}
+
+.button_circle:active {
+    background-color:  cyan;
+}
+
+section#monitor {
+    margin-top: 2px;
+	width: 32px;
+    display: table-cell;
+    height: 34px;
+}
+
+section#monitor div {
+	background-color: #111111;
+    color: #00FF00;
+    font-size: 12px;
+    text-align: center;
+	vertical-align: middle;
+    margin: 0 auto;
+    width: 100%;
+    height: 50%;  
+}
+
+section#monitor div#function {
+	font-size: 9px;
+}
+
+section#hold {
+	width: 40px;
+}
+
+section#play {
+	width: 34px;
+}
+
+#button_play {
+    text-decoration: none;
+    text-align: center;
+    line-height: 25px;
+    width: 30px;
+    height: 30px;
+    margin-top: 3px;
+}
+
+#button_play:hover {
+	background-color: orange;
+    cursor: pointer;
+}
+
+button#button_hold {
+    width: 32px;
+	background-color: gray;
+    font-weight: bold;
+    height: 18px;
+}
+
+label#quote {
+	float: right;
+    font-size: 9px;
+    line-height: 0.5em;
+}

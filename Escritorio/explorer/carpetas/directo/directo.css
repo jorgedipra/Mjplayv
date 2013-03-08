@@ -1,0 +1,41 @@
+::selection{text-shadow:0 0 20px #017ecd,1px 1px 1px #808080;}
+ul{
+    position:absolute;
+    top:5px;
+    font-size:100%;
+    padding:0;
+}
+ul li{
+display:inline-block;
+padding:10px 30px;
+width:45px;
+text-align:center;
+}
+ul li img
+{
+    width:80px;
+    height:90px;
+    
+}
+ul li p
+{
+   padding:0;
+   text-indent:0;
+    color:#ccc;
+    font-size:10px;
+    text-align:left;
+}
+ul li:hover
+{
+    text-shadow:0 0 20px #017ecd,1px 1px 1px #808080;
+}
+    .img img{
+        position:fixed;
+        border:solid #000 0px;
+        bottom:10px;
+         right:10px;
+         width:20%; 
+         opacity:0.4;
+    }
+    a{ text-decoration:none;
+    color:#000;}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>CODIGO Html5 Semantica</title>
+        <link rel="shortcut icon" href="/imagenes/icono.ico" />
+         <script src="/javascript/editor.js"></script>  
+    </head>
+    <body>
+        
+        <article>
+            <p><font size="3" color="#223ad4">Html5 Semantica5</font></p> 
+
+        </article>
+     <style>
+ .boto-pan
+{
+  position:absolute;
+  margin-top: -35px; /* alto*/
+  margin-left: 50px; /*ancho */
+  background: #000000;
+}
+.button-edit
+{
+ font-family: Arial;
+  color: #4aed05;
+  font-size: 21px;
+  padding: 5px;
+  text-decoration: none;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border: solid #4aed05 2px;
+  background: #080008;
+}
+.button-edit:hover {
+ font-family: Arial;
+  color: #030303;
+  font-size: 21px;
+  padding: 5px;
+  text-decoration: none;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border: solid #000000 2px;
+  background: #4aed05;
+}
+
+/* configuracion de las pestañas */
+ul#tabs {
+	position:absolute;
+	left: 0px;
+	top: 0px;
+	margin:0;
+	padding:0;
+	width: 500px;
+	height: 24px;
+	z-index: 20;
+}
+	ul#tabs li {
+		float:left;
+		height: 23px;
+		padding-left: 8px;
+		list-style: none;
+		margin-right: 1px;
+		background: url(tabs.png) left -48px;
+	}
+	ul#tabs li.actual {
+		height: 24px;
+		background: url(tabs.png) left -72px;
+	}
+		ul#tabs li a {
+			display: block;
+				/* hack para ie6 */
+				.display: inline-block;
+				/* fin del hack */
+			height: 23px;
+			line-height: 23px;
+			padding-right: 8px;
+			outline: 0px none;
+			text-decoration: none;
+		}
+		
+		ul#tabs li.actual a {
+			height: 24px;
+			line-height: 24px;
+			cursor: default;	
+             font-family: Arial;
+            color: #030303;
+            font-size: 21px;
+            padding: 5px;
+            text-decoration: none;
+            -webkit-border-radius: 60px;
+            -moz-border-radius: 60px;
+            border: solid #000000 2px;
+            background: #4aed05;
+		}
+        .cuerpo1{
+        
+         margin-top: 50px; /* alto*/
+         margin-left: 10px; /*ancho */
+        }
+        .cuerpo2 {
+        
+         margin-top: 50px; /* alto*/
+         margin-left: 10px; /*ancho */ 
+        }
+        
+</style> 
+</head>
+<body>
+ <section>
+    <article>
+        <div class="boto-pan" >     
+    </div>
+        	<div id="paneles">
+        
+	  <div id="panel_01">    
+      <section class="cuerpo1">
+      <textarea rows="30" name="S1" cols="70"  style=" background-color: #000000; color:#4aed05;">
+<section>
+<header>
+<h1>Ave del paraíso</h1>
+</header>
+<p>Narrativa policíaca y de intriga/Novela negra.</p>
+<footer>
+<p>MJ PLAy-V</p>
+</footer>
+</section>
+      </textarea>
+        
+      </section>     
+       </div>
+
+       </div>
+  
+	<script type="text/javascript">
+		tab('tab_01','panel_01');
+	</script>
+    </div>    
+    </section>
+     </article>
+    
+ </section>
+ 
+</body>
+</html>
+     

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title>CODIGO VIDEO HTML5</title>
+        <link rel="shortcut icon" href="/imagenes/icono.ico" />
+         <script src="/javascript/editor.js"></script>  
+    </head>
+    <body>
+        
+        <article>
+            <p><font size="3" color="#223ad4">AUDIO Y VIDEO EN HTML5</font></p> 
+
+        </article> 
+     <style>
+.boto-pan
+{
+  position:absolute;
+  margin-top: -35px; /* alto*/
+  margin-left: 50px; /*ancho */
+  background: #000000;
+}
+.button-edit
+{
+ font-family: Arial;
+  color: #4aed05;
+  font-size: 21px;
+  padding: 5px;
+  text-decoration: none;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border: solid #4aed05 2px;
+  background: #080008;
+}
+.button-edit:hover {
+ font-family: Arial;
+  color: #030303;
+  font-size: 21px;
+  padding: 5px;
+  text-decoration: none;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border: solid #000000 2px;
+  background: #4aed05;
+}
+
+/* configuracion de las pestañas */
+ul#tabs {
+	position:absolute;
+	left: 0px;
+	top: 0px;
+	margin:0;
+	padding:0;
+	width: 500px;
+	height: 24px;
+	z-index: 20;
+}
+	ul#tabs li {
+		float:left;
+		height: 23px;
+		padding-left: 8px;
+		list-style: none;
+		margin-right: 1px;
+		background: url(tabs.png) left -48px;
+	}
+	ul#tabs li.actual {
+		height: 24px;
+		background: url(tabs.png) left -72px;
+	}
+		ul#tabs li a {
+			display: block;
+				/* hack para ie6 */
+				.display: inline-block;
+				/* fin del hack */
+			height: 23px;
+			line-height: 23px;
+			padding-right: 8px;
+			outline: 0px none;
+			text-decoration: none;
+		}
+		
+		ul#tabs li.actual a {
+			height: 24px;
+			line-height: 24px;
+			cursor: default;	
+             font-family: Arial;
+            color: #030303;
+            font-size: 21px;
+            padding: 5px;
+            text-decoration: none;
+            -webkit-border-radius: 60px;
+            -moz-border-radius: 60px;
+            border: solid #000000 2px;
+            background: #4aed05;
+		}
+        .cuerpo1{
+        
+         margin-top: 50px; /* alto*/
+         margin-left: 10px; /*ancho */
+        }
+        .cuerpo2 {
+        
+         margin-top: 50px; /* alto*/
+         margin-left: 10px; /*ancho */ 
+        }
+        
+</style> 
+</head>
+<body>
+ <section>
+    <article>
+     <div class="boto-pan" >     
+	<ul id="tabs">
+    	<li id="tab_01"><a class="button-edit" onclick="tab('tab_01','panel_01');">AUDIO & VIDEO</a></li>
+        <li id="tab_02"><a class="button-edit" onclick="tab('tab_02','panel_02');">REPRODUCTOR</a></li>
+    </ul>
+    </div>
+        	<div id="paneles">
+        
+	 <div id="panel_01">    
+      <section class="cuerpo1">
+      <textarea rows="30" name="S1" cols="70"  style=" background-color: #000000; color:#4aed05;">
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset"Utf-8"/>
+    </head>
+    <body>
+        <header>
+            <center>
+                <h1>MJPlay-v video y audio html5</h1>
+            </center>        
+        </header>
+        <section>
+            <article>
+              
+             <center>
+                <h2>video html5</h2>              
+              <video id="MJPLay-V-video"  width="640" height="264" poster="http://mjplay-v.16mb.com/imagenes/ojosve.jpg" controls preload>
+              <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>  
+              <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm;  codecs="vp8, vorbis"'>
+              <source src="http://video-js.zencoder.com/oceans-clip.ogg" type='video/ogg; codecs="theora, vorbis"'>-->
+                video no soportado por el navegador
+              </video>              
+           </center>
+            </article>
+            
+             <article>
+              <center>
+                <h2>audio html5</h2>
+                 <audio id="MJPLay-V-audio" autobuffer controls autoplay="true" >
+                   <source src="/repro/MJPLay-V.mp3">
+                    audio no soportado por navegador
+                  </audio>
+                </center>
+            </article>
+        </section>
+    </body>
+</html>   
+      </textarea>
+        
+      </section>     
+       </div>
+        
+        <div id="panel_02">
+	   <section class="cuerpo2"> 
+       <textarea rows="30" name="S1" cols="70"  style=" background-color: #000000; color:#4aed05;">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Reproductor en HTML5</title>
+	<meta charset="utf-8"/>
+	<link href='http://fonts.googleapis.com/css?family=Viga|Titan+One|Passion+One|Cabin+Condensed:700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="http://rfdz.mx/The-Duxer/css/theduxer.css">
+
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+	<script src="http://cdn.jquerytools.org/1.2.6/form/jquery.tools.min.js"></script>
+
+	<script  src="http://rfdz.mx/The-Duxer/js/theduxer.min.js"></script>
+
+</head>
+
+<body>
+	
+	<section id="player" data-autoplay="1" data-loop = "1" data-random="0">
+		<section id="controls">
+			
+			<section id="songTitle">
+				<span>MBR Twinkillefasdsfdafsdr Eran Hersh Darmon ft. Stacy Michell o mas </span>
+			</section>
+
+			<section id="playertrols">
+				<div id="plauseStop">
+					<div id="plause"></div>
+					<div id="stop"></div>
+				</div>
+
+				<div id="progressBar">
+					<div id="timeLoaded"></div>
+					<div id="timePlayed"></div>
+				</div>
+			</section>
+
+			<section id="volumeTime">
+				<input type="range" min="0" max="1" step="0.1" value="0.5"/>
+
+				<div id="timeStatus">
+					<time id="played">00:00</time>
+						<span>/</span>
+					<time id="totalTime">00:00</time>
+				</div>
+			</section>
+
+		</section>
+		<section id="playlist">
+
+			<section id="tracks">
+
+				<article class="track" data-source="http://xookwankii.mx/rfdz/XookwankiiPurpleCover">
+
+					<span>MBR Twinkiller Eran Hersh Darmon ft. Stacy Michelle - Feel it (Xookwankii rework)</span>
+
+				</article>
+
+				<article class="track" id="fFtg45" data-source="http://xookwankii.mx/rfdz/XookwankiiPoorNeedyTeaser1">
+
+					<span class="track-name">Xookwankii - Poor Needy TEASER 1</span>
+
+				</article>
+
+				<article class="track" id="SDf436" data-source="http://xookwankii.mx/rfdz/XookwankiiFrikiMix">
+
+					<span class="track-name">Xookwankii ft. S&auml;ida Harmouz - S&auml;ida</span>
+
+				</article>
+
+
+			</section>
+
+			<section id="playlistControl">
+				<span>▲</span>
+			</section>
+
+		</section>
+	</section>
+
+	<section id="html5Valid">	
+			<img src="http://rfdz.mx/The-Duxer/img/html5.png" alt="HTML5 V&aacute;lido" title="HTML5 V&aacute;lido"/>
+	 </section>
+
+	
+
+	<div id="currentTime">
+		<time>00:00</time>
+	</div>
+
+	<script>
+
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-22883595-7']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+
+	</script>
+</body>
+</html>  
+       
+       
+      </textarea>
+        </section>
+		</div>
+   
+       </div>
+	<script type="text/javascript">
+		tab('tab_01','panel_01');
+	</script>
+    </div>    
+    </section>
+     </article>
+    
+ </section>
+        
+</body>
+</html>
+     

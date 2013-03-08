@@ -1,0 +1,370 @@
+body{
+margin:0;
+padding:0;
+}
+#page-flip{
+background: #ccc;
+height:115%;
+overflow:hidden;
+margin:10px auto;
+padding-top: 30px;
+padding-left: 300px;
+position:relative;
+border: solid rgba(0, 0, 0, 0) 10px;
+width:600px;
+}
+
+#p1{
+height:1388px;
+overflow:hidden;
+width:1285px;
+}
+#p1 > div{
+/*pagina1*/
+background:url(img/portada.JPG);
+/*background-size*/
+-webkit-background-size:300px 388px;
+   -moz-background-size:300px 388px;
+     -o-background-size:300px 388px;
+        background-size:300px 388px;
+height:388px;
+width:285px;
+/*transform-origin*/
+-webkit-transform-origin:285px 0;
+   -moz-transform-origin:285px 0;
+    -ms-transform-origin:285px 0;
+     -o-transform-origin:285px 0;
+        transform-origin:285px 0;
+/*transform*/
+-webkit-transform:translate(1030px, 500px) rotate(32deg);
+   -moz-transform:translate(1030px, 500px) rotate(32deg);
+    -ms-transform:translate(1030px, 500px) rotate(32deg);
+     -o-transform:translate(1030px, 500px) rotate(32deg);
+        transform:translate(1030px, 500px) rotate(32deg);
+/*transition-duration*/
+-webkit-transition-duration:1s;
+   -moz-transition-duration:1s;
+     -o-transition-duration:1s;
+        transition-duration:1s;
+/*transition-property*/
+-webkit-transition-property:-webkit-transform, -webkit-transform-origin;
+   -moz-transition-property:   -moz-transform, -moz-transform-origin;
+     -o-transition-property:     -o-transform, -o-transform-origin;
+        transition-property:        transform, transform-origin;
+}
+#p1 > div > div{
+/*borde de pagina1*/
+background:-webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .25)), to(rgba(0,0,0,0)));
+height:388px;
+width:10px;
+background:#fff;
+}
+#p2 > div{
+/*pagina3*/
+background-image:url();
+background:#fff;
+height:388px;
+width:285px;
+z-index:1;
+/*box-shadow*/
+-webkit-box-shadow:0 0 11px rgba(0, 0, 0, .5);
+   -moz-box-shadow:0 0 11px rgba(0, 0, 0, .5);
+        box-shadow:0 0 11px rgba(0, 0, 0, .5);
+}
+#p2 > div img { 
+display: block;
+opacity: 1;
+position: absolute;
+height:388px;
+width:285px;
+top: 30px;
+left: 300px;
+}
+#p3{
+/*pagina2*/
+height:1388px;
+overflow:hidden;
+width:1285px;
+}
+#p3 > div{
+/*pagina2*/
+background-image:url();
+background:#fff;
+height:388px;
+overflow:hidden;
+width:285px;
+/*transform-origin*/
+-webkit-transform-origin:0 0;
+   -moz-transform-origin:0 0;
+    -ms-transform-origin:0 0;
+     -o-transform-origin:0 0;
+        transform-origin:0 0;
+/*transform*/
+-webkit-transform:translate(1255px, 500px) rotate(-32deg);
+   -moz-transform:translate(1255px, 500px) rotate(-32deg);
+    -ms-transform:translate(1255px, 500px) rotate(-32deg);
+     -o-transform:translate(1255px, 500px) rotate(-32deg);
+        transform:translate(1255px, 500px) rotate(-32deg);
+/*transition-property*/
+-webkit-transition-property:-webkit-transform, -webkit-transform-origin;
+   -moz-transition-property:   -moz-transform, -moz-transform-origin;
+     -o-transition-property:     -o-transform, -o-transform-origin;
+        transition-property:        transform, transform-origin;
+/*transition-duration*/
+-webkit-transition-duration:1s;
+   -moz-transition-duration:1s;
+     -o-transition-duration:1s;
+        transition-duration:1s;
+/*box-shadow*/
+-webkit-box-shadow:0 0 11px rgba(0, 0, 0, .5);
+   -moz-box-shadow:0 0 11px rgba(0, 0, 0, .5);
+        box-shadow:0 0 11px rgba(0, 0, 0, .5);
+}
+#p3 > div > div{
+/*pagina2*/
+background:-webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(0,0,0,.20)));
+float:right;
+height:500px;
+width:9px;
+}
+#r1{
+/*pagina1*/
+position:absolute;
+z-index:2;
+/*transform-origin*/
+-webkit-transform-origin:1315px 500px;
+   -moz-transform-origin:1315px 500px;
+    -ms-transform-origin:1315px 500px;
+     -o-transform-origin:1315px 500px;
+        transform-origin:1315px 500px;
+/*transform*/
+-webkit-transform:translate(-1030px, -500px) rotate(-32deg);
+   -moz-transform:translate(-1030px, -500px) rotate(-32deg);
+    -ms-transform:translate(-1030px, -500px) rotate(-32deg);
+     -o-transform:translate(-1030px, -500px) rotate(-32deg);
+        transform:translate(-1030px, -500px) rotate(-32deg);
+/*transition-duration*/
+-webkit-transition-duration:1s;
+   -moz-transition-duration:1s;
+     -o-transition-duration:1s;
+        transition-duration:1s;
+/*transition-property*/
+-webkit-transition-property:-webkit-transform, -webkit-transform-origin;
+   -moz-transition-property:   -moz-transform, -moz-transform-origin;
+     -o-transition-property:     -o-transform, -o-transform-origin;
+        transition-property:        transform, transform-origin;
+}
+#r3{
+/*pagina3*/
+position:absolute;
+z-index:2;
+/*transform-origin*/
+-webkit-transform-origin:1315px 500px;
+   -moz-transform-origin:1315px 500px;
+    -ms-transform-origin:1315px 500px;
+     -o-transform-origin:1315px 500px;
+        transform-origin:1315px 500px;
+/*transform*/
+-webkit-transform:translate(-1030px, -500px) rotate(-32deg);
+   -moz-transform:translate(-1030px, -500px) rotate(-32deg);
+    -ms-transform:translate(-1030px, -500px) rotate(-32deg);
+     -o-transform:translate(-1030px, -500px) rotate(-32deg);
+        transform:translate(-1030px, -500px) rotate(-32deg);
+/*transition-property*/
+-webkit-transition-property:-webkit-transform, -webkit-transform-origin;
+   -moz-transition-property:   -moz-transform, -moz-transform-origin;
+     -o-transition-property:     -o-transform, -o-transform-origin;
+        transition-property:        transform, transform-origin;
+/*transition-duration*/
+-webkit-transition-duration:1s;
+   -moz-transition-duration:1s;
+     -o-transition-duration:1s;
+        transition-duration:1s;
+}
+#s2{
+/*dobles*/
+position:absolute;
+/*transform-origin*/
+-webkit-transform-origin:45px 500px;
+   -moz-transform-origin:45px 500px;
+    -ms-transform-origin:45px 500px;
+     -o-transform-origin:45px 500px;
+        transform-origin:45px 500px;
+/*transform*/
+-webkit-transform:translate(240px, -500px) rotate(-32deg);
+   -moz-transform:translate(240px, -500px) rotate(-32deg);
+    -ms-transform:translate(240px, -500px) rotate(-32deg);
+     -o-transform:translate(240px, -500px) rotate(-32deg);
+        transform:translate(240px, -500px) rotate(-32deg);
+/*transition-property*/
+-webkit-transition-property:-webkit-transform, -webkit-transform-origin;
+   -moz-transition-property:   -moz-transform, -moz-transform-origin;
+     -o-transition-property:     -o-transform, -o-transform-origin;
+        transition-property:        transform, transform-origin;
+/*transition-duration*/
+-webkit-transition-duration:1s;
+   -moz-transition-duration:1s;
+     -o-transition-duration:1s;
+        transition-duration:1s;
+}
+#s3{
+/*visivilidad de pagina2 y borde exterior*/
+position:absolute;
+z-index:1;
+/*transform-origin*/
+-webkit-transform-origin:70px 500px;
+   -moz-transform-origin:70px 500px;
+    -ms-transform-origin:70px 500px;
+     -o-transform-origin:70px 500px;
+        transform-origin:70px 500px;
+/*transform*/
+-webkit-transform:translate(215px, -500px) rotate(-32deg) translate(40px, 0);
+   -moz-transform:translate(215px, -500px) rotate(-32deg) translate(40px, 0);
+    -ms-transform:translate(215px, -500px) rotate(-32deg) translate(40px, 0);
+     -o-transform:translate(215px, -500px) rotate(-32deg) translate(40px, 0);
+        transform:translate(215px, -500px) rotate(-32deg) translate(40px, 0);
+/*transition-property*/
+-webkit-transition-property:-webkit-transform, -webkit-transform-origin;
+   -moz-transition-property:   -moz-transform, -moz-transform-origin;
+     -o-transition-property:     -o-transform, -o-transform-origin;
+        transition-property:        transform, transform-origin;
+/*transition-duration*/
+-webkit-transition-duration:1s;
+   -moz-transition-duration:1s;
+     -o-transition-duration:1s;
+        transition-duration:1s;
+}
+#s4{
+/*visibilidad de pagina1 duracion del pincipio de dobles*/
+opacity:1;
+/*transition-duration*/
+-webkit-transition-duration:0.5s;
+   -moz-transition-duration:0.5s;
+     -o-transition-duration:0.5s;
+        transition-duration:0.5s;
+}
+#sp2{
+/*dobles*/
+background:-webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, .18)), to(rgba(0,0,0,0)));
+height:1000px;
+overflow:hidden;
+width:15px;
+}
+#sp3{
+/*sonbra de dobles*/
+background:-webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .25)), to(rgba(0,0,0,0)));
+height:1000px;
+overflow:hidden;
+width:25px;
+/*transition-duration*/
+-webkit-transition-duration:1s;
+   -moz-transition-duration:1s;
+     -o-transition-duration:1s;
+        transition-duration:1s;
+/*transition-property*/
+-webkit-transition-property:width;
+   -moz-transition-property:width;
+     -o-transition-property:width;
+        transition-property:width;
+}
+.s{
+/*dobles de hoja*/
+height:388px;
+overflow:hidden;
+position:absolute;
+width:285px;
+z-index:3;
+}
+#page-flip:hover #p1 > div{
+/*transform-origin*/
+-webkit-transform-origin:285px 0;
+   -moz-transform-origin:285px 0;
+    -ms-transform-origin:285px 0;
+     -o-transform-origin:285px 0;
+        transform-origin:285px 0;
+/*transform*/
+-webkit-transform:translate(1285px, 500px) rotate(0deg);
+   -moz-transform:translate(1285px, 500px) rotate(0deg);
+    -ms-transform:translate(1285px, 500px) rotate(0deg);
+     -o-transform:translate(1285px, 500px) rotate(0deg);
+        transform:translate(1285px, 500px) rotate(0deg);
+}
+#page-flip:hover #p3 > div{
+/*transform-origin*/
+-webkit-transform-origin:0 0;
+   -moz-transform-origin:0 0;
+    -ms-transform-origin:0 0;
+     -o-transform-origin:0 0;
+        transform-origin:0 0;
+/*transform*/
+-webkit-transform:translate(1000px, 500px) rotate(0deg);
+   -moz-transform:translate(1000px, 500px) rotate(0deg);
+    -ms-transform:translate(1000px, 500px) rotate(0deg);
+     -o-transform:translate(1000px, 500px) rotate(0deg);
+        transform:translate(1000px, 500px) rotate(0deg);
+}
+#page-flip:hover #r1{
+/*transform-origin*/
+-webkit-transform-origin:1570px 500px;
+   -moz-transform-origin:1570px 500px;
+    -ms-transform-origin:1570px 500px;
+     -o-transform-origin:1570px 500px;
+        transform-origin:1570px 500px;
+/*transform*/
+-webkit-transform:translate(-1285px, -500px) rotate(0deg);
+   -moz-transform:translate(-1285px, -500px) rotate(0deg);
+    -ms-transform:translate(-1285px, -500px) rotate(0deg);
+     -o-transform:translate(-1285px, -500px) rotate(0deg);
+        transform:translate(-1285px, -500px) rotate(0deg);
+}
+#page-flip:hover #r3{
+/*transform-origin*/
+-webkit-transform-origin:1570px 500px;
+   -moz-transform-origin:1570px 500px;
+    -ms-transform-origin:1570px 500px;
+     -o-transform-origin:1570px 500px;
+        transform-origin:1570px 500px;
+/*transform*/
+-webkit-transform:translate(-1285px, -500px) rotate(0deg);
+   -moz-transform:translate(-1285px, -500px) rotate(0deg);
+    -ms-transform:translate(-1285px, -500px) rotate(0deg);
+     -o-transform:translate(-1285px, -500px) rotate(0deg);
+        transform:translate(-1285px, -500px) rotate(0deg);
+}
+#page-flip:hover #s3{
+/*transform-origin*/
+-webkit-transform-origin:325px 500px;
+   -moz-transform-origin:325px 500px;
+    -ms-transform-origin:325px 500px;
+     -o-transform-origin:325px 500px;
+        transform-origin:325px 500px;
+/*transform*/
+-webkit-transform:translate(-40px, -500px) rotate(0deg) translate(40px, 0);
+   -moz-transform:translate(-40px, -500px) rotate(0deg) translate(40px, 0);
+    -ms-transform:translate(-40px, -500px) rotate(0deg) translate(40px, 0);
+     -o-transform:translate(-40px, -500px) rotate(0deg) translate(40px, 0);
+        transform:translate(-40px, -500px) rotate(0deg) translate(40px, 0);
+}
+#page-flip:hover #sp3{
+width:11px;
+}
+
+
+#page-flip:hover #coke{
+/*hover de acceso directo parte superior(pagina3)*/
+margin:33px 0 0 14px;
+/*transition-delay*/
+-webkit-transition-delay:.8s;
+   -moz-transition-delay:.8s;
+     -o-transition-delay:.8s;
+        transition-delay:.8s;
+}
+#page-flip:hover #meninas{
+/*hover de acceso directo parte inferior(pagina3)*/
+margin:25px 0 0 14px;
+/*transition-delay*/
+-webkit-transition-delay:.8s;
+   -moz-transition-delay:.8s;
+     -o-transition-delay:.8s;
+        transition-delay:.8s;
+}

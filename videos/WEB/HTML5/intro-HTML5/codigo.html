@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title>CODIGO INTRO HTML5</title>
+        <link rel="shortcut icon" href="/imagenes/icono.ico" />
+         <script src="/javascript/editor.js"></script>  
+    </head>
+    <body>
+        
+        <article>
+            <p><font size="3" color="#223ad4">INTRODUCCION A HTML5</font></p> 
+
+        </article>
+     <style>
+ .boto-pan
+{
+  position:absolute;
+  margin-top: -35px; /* alto*/
+  margin-left: 50px; /*ancho */
+  background: #000000;
+}
+.button-edit
+{
+ font-family: Arial;
+  color: #4aed05;
+  font-size: 21px;
+  padding: 5px;
+  text-decoration: none;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border: solid #4aed05 2px;
+  background: #080008;
+}
+.button-edit:hover {
+ font-family: Arial;
+  color: #030303;
+  font-size: 21px;
+  padding: 5px;
+  text-decoration: none;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border: solid #000000 2px;
+  background: #4aed05;
+}
+
+/* configuracion de las pestañas */
+ul#tabs {
+	position:absolute;
+	left: 0px;
+	top: 0px;
+	margin:0;
+	padding:0;
+	width: 500px;
+	height: 24px;
+	z-index: 20;
+}
+	ul#tabs li {
+		float:left;
+		height: 23px;
+		padding-left: 8px;
+		list-style: none;
+		margin-right: 1px;
+		background: url(tabs.png) left -48px;
+	}
+	ul#tabs li.actual {
+		height: 24px;
+		background: url(tabs.png) left -72px;
+	}
+		ul#tabs li a {
+			display: block;
+				/* hack para ie6 */
+				.display: inline-block;
+				/* fin del hack */
+			height: 23px;
+			line-height: 23px;
+			padding-right: 8px;
+			outline: 0px none;
+			text-decoration: none;
+		}
+		
+		ul#tabs li.actual a {
+			height: 24px;
+			line-height: 24px;
+			cursor: default;	
+             font-family: Arial;
+            color: #030303;
+            font-size: 21px;
+            padding: 5px;
+            text-decoration: none;
+            -webkit-border-radius: 60px;
+            -moz-border-radius: 60px;
+            border: solid #000000 2px;
+            background: #4aed05;
+		}
+        .cuerpo1{
+        
+         margin-top: 50px; /* alto*/
+         margin-left: 10px; /*ancho */
+        }
+        .cuerpo2 {
+        
+         margin-top: 50px; /* alto*/
+         margin-left: 10px; /*ancho */ 
+        }
+        
+</style> 
+</head>
+<body>
+ <section>
+    <article>
+        <div class="boto-pan" >     
+	<ul id="tabs">
+    	<li id="tab_01"><a class="button-edit" onclick="tab('tab_01','panel_01');">HTML5</a></li>
+        <li id="tab_02"><a class="button-edit" onclick="tab('tab_02','panel_02');">HTML4</a></li>
+    </ul>
+    </div>
+        	<div id="paneles">
+        
+	  <div id="panel_01">    
+      <section class="cuerpo1">
+      <textarea rows="30" name="S1" cols="70"  style=" background-color: #000000; color:#4aed05;">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Titulo de la web</title>
+<meta charset="utf-8" />
+ <meta name="viewport" content="width=device-width , initial-scale=1 ,maximum-scale=1" />
+ <!---para compatibilidad con dispositivos moviles---->
+<link rel="stylesheet" href="estilos.css" />
+<script src="javascript.js"></script>
+<link rel="shortcut icon" href="iconodepagina.ico" />
+</head> 
+<body>
+    <header>
+       <h1>Mi sitio web</h1>
+       <p>Mi sitio web creado en html5</p>
+        <nav>
+              <ul>
+               <li><a href="inicio.html">Inicio</a></li>
+               <li><a href="opcion.html">Opcion</a></li>
+               <li><a href="opcion.html">Opcion</a></li>
+             </ul>
+         </nav>
+    </header>
+    <section>
+       <article>
+           <h2>Titilo de contenido<h2>
+           <p> Contenido (ademas de imagenes, citas, videos etc.) </p>
+            <section><!--- aquí ocurre un subsection---->
+              <h3>Titilo de contenido</h3>
+              <p> Contenido (ademas de imagenes, citas, videos etc.) </p>
+                 <a href="#" onclick="myFunction()">precioname</a>
+            </section>
+           <footer>@autor</footer>
+       </article>
+    </section>
+    <aside>
+       <h3>Titulo de contenido</h3>
+           <p>contenido</p>
+    </aside>
+    <footer>@2012</footer>
+</body>
+</html>
+      </textarea>
+        
+      </section>     
+       </div>
+        
+        <div id="panel_02">
+	   <section class="cuerpo2">
+       <textarea rows="30" name="S1" cols="70"  style=" background-color: #000000; color:#4aed05;">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="es">
+<title>Titulo de la web</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="/.css" type="text/css" />
+<script type="text/javascript" src="/.js"></script>  
+</head>
+<body>
+ <div id="header">
+    <h1>Mi sitio web  MJPlay-V</h1>
+    <p>Mi sitio web creado en HTML5</p>
+ </div>
+ <div class="section">
+    <div class="post">
+        <h2>Titulo de contenido<h2>
+        <p> Contenido (ademas de imagenes, citas, videos etc.) </p>
+    </div>
+ </div>
+ <div id="sidebar">
+   <h3>Titulo de contenido</h3>
+       <p>contenido</p>
+</div>
+<div id="footer">
+   Creado por mi el 2012
+</div>
+</body>
+</html>
+      </textarea>
+        </section>
+		</div>
+   
+       </div>
+  
+	<script type="text/javascript">
+		tab('tab_01','panel_01');
+	</script>
+    </div>    
+    </section>
+     </article>
+    
+ </section>
+ 
+</body>
+</html>
+     

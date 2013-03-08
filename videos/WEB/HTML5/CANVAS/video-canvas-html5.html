@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+         <script src="/javascript/listahtml5.js"></script>
+        <title>VIDEO-INTRO A HTML5</title>
+        <link rel="shortcut icon" href="/imagenes/icono.ico" />
+    </head>
+    <body onload="guardar()" >
+         <script>
+        function guardar(){ 
+           document.write("<iframe width='610' height='340' src='"+ sessionStorage.getItem('canvashtml5url') +"' frameborder='0' allowfullscreen></iframe><style>body{ background:#000;}</style>");
+             }
+
+        </script>  
+             
+        </body>
+</html>

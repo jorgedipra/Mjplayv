@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Presentation</title>
+ <meta charset="utf-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+ <meta name="viewport" content="width = device-width, initial-scale=1, maximum-scale=1"/>
+ <meta name="description" content="CAPA DE ENLACE TCP/IP">
+ <meta property="og:title" content="MJPlay-V" />
+ <meta property="og:type" content="website" />
+ <meta property="og:url" content="http://mjplay-v.16mb.com/"/>
+ <meta property="og:image" content="https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-prn1/561117_277654852340416_780149522_n.jpg" />
+ <meta property="og:site_name" content="mjplay-v.16mb.com" />
+ <title>MJ Play-V</title>
+ <link rel="shortcut icon" href="/imagenes/icono.ico" />
+ <link href="/presentacion/StyleSheet.css" rel="stylesheet" /> 
+    <script src='/presentacion/Script.js'></script>
+  </head>
+  <body style='display: none'>
+
+    <section class='slides layout-regular template-default'>
+      
+      <article class='biglogo'>
+         <section id="titulo"><iframe width="0" height="0" style="display:none" src="http://www.youtube.com/watch_popup?v=HBPnfnvXq0E&vq=medium" frameborder="0" allowfullscreen></iframe>CAPA DE ENLACE TCP/IP</section> 
+      </article>
+
+      <article>
+        <h1>
+          CAPA DE ENLACE 
+          <br>
+          TCP/IP
+        </h1>
+        <p>
+          Jorge Edwin Diaz Prado<br>
+          Sebastian Gomez
+          <br>
+          Octubre 18, 2012
+        </p>
+      </article>
+      
+      <article>
+           <section id="titulo">CAPA DE ENLACE TCP/IP</section> 
+        <p>
+         La capa 2 del modelo <b>TCP/IP</b> establece los procesos para acceder al medio así como los algoritmos para la detección de errores. A través de las direcciones de capa 2, también conocidas como direcciones <b>MAC</b> (por sus siglas en ingles, Media Access Control) se comunican equipos ubicados en una misma red, y hacemos énfasis en estas ultimas palabras para no confundirnos con las direcciones IP. 
+        </p>
+        <p>
+            <center>
+          <img src="/presentacion/img/capa_enlace.jpg" title="tabla" width="300px" height="300px" alt="tcp/ip"></center>
+        </p>
+      </article>
+
+      <article>
+        <h3>
+          Capa de Enlace
+        </h3>
+       <section id="resu" class="build">                  
+               <a data-role="button">Provee el control de la capa física</a>
+               <a data-role="button">Detecta y/o corrige Errores de transmisión</a>
+               <a data-role="button">Implementa control de flujo en el envío de la información</a>
+            </section>
+      </article>
+
+      <article class='smaller'>
+          <div class="build">
+          <iframe src="http://localhost:57916/presentacion/funcion.html" width="99%"></iframe>
+
+<section id="mokume">
+• Obligatorias:<br>
+– Identificar tramas<br> (agrupación de bits que se 
+intercambia a nivel de enlace)<br>
+– Detección de errores
+</section>
+<section id="mokume">
+    • Opcionales (servicio orientado a conexión):<br>
+– Control de flujo<br>
+– Corrección de errores
+</section>
+              </div>
+      </article>
+
+      <article >
+        <h3>
+          Técnicas de identificación de tramas
+        </h3>
+          <code>Las tramas se delimitan por diferentes métodos: </code>
+        <ul class="build">
+          <li>
+            <code>Contador de caracteres; </code> posibles problemas por pérdida
+de sincronismo.
+          </li>
+          <li>
+            <code>Caracteres de inicio y final </code> con caracteres de relleno. 
+Normalmente ASCII “DLE” “STX” para inicio y “DLE”
+“ETX” para final, con DLE de relleno.
+          </li>
+          <li>
+           <code>Secuencia de bits</code> indicadora de inicio y final, con bits de 
+relleno; normalmente 01111110 (0x7E); si en los datos
+aparecen 5 bits seguidos a 1 se intercala automáticamente
+un 0.
+          </li>
+          <li>
+          <code> Violaciones de código</code>a nivel físico.
+          </li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>
+          Códigos de control de errores
+        </h3>
+          <code>• Los códigos en función de la distancia de Hamming (d) pueden
+ser:</code>
+        <ul class="build">
+          <li>
+           <code>Detectores:</code>  sólo permiten detectar “d-1” errores , p. ej. CRC 
+(Cyclic Redundancy Check). Este tipo de códigos se llaman
+BEC Backward Error Correction, de forma que tienen que
+solicitar al emisor, hacia atrás (back) el reenvío.
+          </li>
+          <li>
+          <code>Correctores:</code>  permite corregir “(d-1)/2” errores . Este tipo
+de códigos también se llaman FEC del inglés Forward Error 
+Correction. p. ej. RS (Reed-Solomon).
+         </li>
+        </ul>  
+      </article>
+
+      <article class='smaller'>
+        <h3>
+         Códigos de control de errores
+        </h3>
+        <ul  class="build">
+          <li>
+           <code>Ejemplo:</code> si la distancia de Hamming es 5, podremos detectar 4 
+errores per corregir sólo 2.
+          <li>
+           Los códigos detectores tienen menos overhead, pues necesitan
+incorporar menos redundancia.
+          <li>
+            Los códigos correctores se utilizan bien en conexiones simplex, 
+bien en multicast o bien en tiempo real.
+          <li>
+          <div id="img">
+           <img src="/presentacion/img/error.jpg" alt="error"></li></div>
+        </ul>
+      </article>
+
+      <article>
+        <h3>
+          Ejemplo de código corrector
+        </h3> 
+        <table>
+          <tr>
+            <th>
+              Supongamos la codificación basada en 4 códigos de 10 bits: 
+00000 00000, 00000 11111, 11111 00000, 11111 11111.
+            <th>
+              Este código tiene una distancia Hamming de 5, por lo cual 
+puede corregir errores dobles. 
+          <tr>
+            <td>
+             Si recibimos 00000 00111, con un doble error, por tanto la 
+palabra código válida más próxima sería 00000 11111.
+            <td>
+            Si recibimos 00000 00111, con un triple error, es decir 
+proveniente de 00000 00000, no se podría corregir    
+          <tr>
+        </table>
+      </article>
+      
+      <article class='smaller'>
+        <h3>
+          <a id="mas">Tasa de errores (BER)</a>
+        </h3>
+       
+<p>• La tasa de errores de un medio de transmisión se 
+mide por la BER (Bit Error Rate) que se define 
+como:<br><code>BER = bits erróneos / bits transmitidos</code></p>
+        <table>
+          <tr>
+            <th class='black'>
+             Medio físico
+            <th class='black'>
+              BER típico
+          <tr>
+            <td>
+              Fibras ópticas
+            <td class='blue'>
+              <10-<em>12</em>
+          <tr>
+            <td>
+              LANs de cobre, Radioenlaces <br>
+              fijos (microondas)
+           <td class='blue'>
+              < 10-<em>8</em>
+           <tr>
+               <td>
+                   Enlaces telefónicos, satélite, <br>
+ADSL, CATV
+                <td class='blue'>
+                     <10-<em>5</em>
+                 <tr>
+                     <td>
+                        GSM( sistema global para las comunicaciones móviles)
+                     <td class='blue'>
+                     <10-<em>5</em>
+        </table>
+      </article>
+      <article>
+      <h3><a id="ej3">Control/detección de errores</a></h3>
+          <p><code>• Los medios de Transmisión son fuentes de ruido 
+que degeneran la señal procedente del emisor
+</code></p>
+          <p><code>• La subsanación de dichos errores se puede realizar 
+en diferentes niveles:</code></p>
+          <p><code>– NIVEL DE ENLACE:</code></p>
+          <p>• El emisor envía información adicional en la trama enviada al 
+nivel inferior junto con los datos recibidos de los niveles 
+superiores.</p>
+          <p>– Bits de <span class='red'>PARIDAD</span> (Horizontal, Vertical)</p>
+          <p>– Bits de <span class='red'>CRC</span> (Código de Redundancia Cíclica)<p>
+          <p><code>– NIVELES SUPERIORES: <span class='red'>Checksum</span></code></p>
+      </article>
+        <article onclick="javascript:location.reload();">
+             <section id="titulo2">Control de flujo</section>
+            <canvas id='c'></canvas>
+<script>
+var width = window.innerWidth,
+height = window.innerHeight,
+c = document.getElementById('c'),
+ctx = c.getContext('2d');
+c.width = width;
+c.height = height;
+
+var paint = [];
+
+var totalPaints = width/50;
+var size = 20;
+
+function init(){
+    for (var i = 0; i < totalPaints; i++){
+        addPaint();
+    }
+    setInterval( update, 40 );
+}
+
+function drawPaint(x,y,size, colour) {
+    ctx.beginPath();
+    ctx.arc(x, y, size ,0 , Math.PI*2, true);
+    ctx.closePath();
+	ctx.fillStyle=colour;
+	ctx.fill();
+}
+
+function update(){
+    for (var i = 0; i < paint.length; i++){
+        paint[i].y = paint[i].y + paint[i].v;
+        if (paint[i].y > height + 60){
+            paint.splice(i,1);
+            addPaint();
+        }
+        drawPaint(paint[i].x, paint[i].y, paint[i].s, paint[i].c);
+    }
+}
+
+function addPaint(){
+    //Try 50 times
+    var i = 50;
+    while(i > 0){
+        size = Math.random() * size + 10;
+        x = Math.random() * width;
+
+        found = false;
+
+        //Dont Allow drips ontop of each other (Overtaking drops destroy the prettyness)
+        for (var j = 0; j < paint.length; j++){
+            if ((x + size > paint[j].x) && (x - size < paint[j].x + paint[j].s)){
+                found = true;
+                break;
+            }
+
+            if ((x - size < paint[j].x) && (x + size > paint[j].x - paint[j].s)){
+                found = true;
+                break;
+            }
+        }
+
+        if (found === false){
+            paint.push({s:size,
+                       x:x,
+                       y:-60,
+                       v:(Math.random() * 2) + 2,
+                       c:'#' + (Math.random() * 0x313131 + 0xaaaaaa | 0).toString(16)});
+			i--;
+            return;
+        }
+    }
+}
+
+init();
+</script>
+        </article>
+<article class='nobackground'>
+     <h3><a id="ej4">Control de Flujo</a></h3>  
+    <p>• Necesario para no <b>'agobiar'</b> al receptor y se realiza principalmente en la
+capa de enlace y de transporte.<br><br>
+• Utiliza diferentes mecanismos de retroalimentación para mandar
+señales de control de flujo, y por tanto requiere un canal semi-duplex o
+full-duplex.<br><br> Estas señales pueden ser activación de líneas hardware
+<code>(RTS, CTS)</code>, caracteres especiales <code>(Xon, Xoff)</code> o tramas especiales
+<code>(tramas que se llaman de reconocimiento o acknowledgment (ack))</code> de
+reconocimiento, para notificar la recepción correcta.<br>
+</p>      
+</article>
+<article>
+    <h3><a id="ej4">Control de Flujo</a></h3>  
+<p>• El envio de acks permite controlar al transmisor, de forma que si no se
+le reconocen las tramas enviadas, éste espera hasta que se le
+reconozcan.<br><br>
+• Los acks se envían en ocasiones aprovechando la transmisión de datos
+en sentido contrario.<br><br> Esta técnica es llamada piggybacked o llevar a
+espaldas.<br><br>
+• El control de flujo no debe limitar la eficiencia del canal.</p>
+</article>
+   
+
+      <article class='fill'>
+        <h3>
+          CAPA DE ENLACE TCP/IP
+        </h3>
+          <center>
+       <embed src="http://n3.slideserve.com/player.swf?moviePath=http://n3.slideserve.com/video/303514.swf&autostart=true&showfsbutton=true" FlashVars="viewkey=presentation/303514/capa-de-enlace-de-datos" loop="False" bgcolor="#ffffff" width="90%" height="446" name="slideserve" allowFullScreen="true" allowscriptaccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" /></center>
+      </article>
+      
+      <article>
+        <iframe width="90%" height="490px" src="http://www.youtube.com/embed/-FeF6QZmRlI" frameborder="0" allowfullscreen></iframe><iframe width="0" height="0" src="http://www.youtube.com/watch_popup?v=2K55p4CSj0Y&vq=medium" frameborder="0" allowfullscreen></iframe>
+        <ul>
+          
+            <a href='http://mjplay-v.16mb.com'>MJPlayV</a>
+        </ul>
+      </article>
+
+    </section>
+
+  </body>
+</html>

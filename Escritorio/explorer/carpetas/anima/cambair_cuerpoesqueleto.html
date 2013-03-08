@@ -1,0 +1,175 @@
+<div class="item">
+    <div class="hover">
+        <div class="laser"></div>
+    </div>
+	<div class="click">
+        <div class="claser"></div>
+    </div>
+    <img class="background" src="http://cssdeck.com/uploads/media/items/1/1AE9zJX.png" />
+</div>
+<style>
+
+.item {
+	position: relative;
+	width: 475px;
+	height: 400px;
+	margin: 50px auto;
+}
+
+.background {
+	position: absolute;
+	z-index: 1;
+	left: 120px;
+	display: block;
+}
+
+.hover {
+	height: 0%;
+	background: url(4af1rdU.png) no-repeat;
+	position: absolute;
+	background-position: 45% 0;
+	z-index: 2;
+
+	-webkit-transition: height 1s ease;
+	-moz-transition: height 1s ease;
+	-o-transition: height 1s ease;
+	-ms-transition: height 1s ease;
+	transition: height 1s ease;
+	width: 100%;
+}
+
+.click {
+	height: 0%;
+	background: url(1ICzabQ.png) no-repeat;
+	position: absolute;
+	background-position: 45% 0;
+	z-index: 2;
+
+	-webkit-transition: height 1s ease;
+	-moz-transition: height 1s ease;
+	-o-transition: height 1s ease;
+	-ms-transition: height 1s ease;
+	transition: height 1s ease;
+	width: 100%;
+}
+
+.item:hover .hover {
+	height: 100%;
+}
+
+.item:active .click {
+	height: 100%;
+}
+
+.laser {
+	height: 3px;
+	width: 100%;
+	background: #86ff5e;
+	display: block;
+	position: absolute;
+	bottom: -2px;
+
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+
+	-webkit-box-shadow: 0 0 20px 10px #86ff5e;
+	-moz-box-shadow: 0 0 20px 10px #86ff5e;
+	box-shadow: 0 0 20px 10px #86ff5e;
+
+	-webkit-transition: opacity .25s ease;
+	-moz-transition: opacity .25s ease;
+	-o-transition: opacity .25s ease;
+	-ms-transition: opacity .25s ease;
+	transition: opacity .25s ease;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0;
+
+	-webkit-transition-delay: .75s;
+	-moz-transition-delay: .75s;
+	-o-transition-delay: .75s;
+	-ms-transition-delay: .75s;
+	transition-delay: .75s;
+}
+
+.claser {
+	height: 3px;
+	width: 100%;
+	background: #01c9ee;
+	display: block;
+	position: absolute;
+	bottom: -2px;
+
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+
+	-webkit-box-shadow: 0 0 20px 10px #01c9ee;
+	-moz-box-shadow: 0 0 20px 10px #01c9ee;
+	box-shadow: 0 0 20px 10px #01c9ee;
+
+	-webkit-transition: opacity .25s ease;
+	-moz-transition: opacity .25s ease;
+	-o-transition: opacity .25s ease;
+	-ms-transition: opacity .25s ease;
+	transition: opacity .25s ease;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0;
+
+	-webkit-transition-delay: .75s;
+	-moz-transition-delay: .75s;
+	-o-transition-delay: .75s;
+	-ms-transition-delay: .75s;
+	transition-delay: .75s;
+}
+
+.item:hover .laser {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+
+	-webkit-transition-delay: 0s;
+	-moz-transition-delay: 0s;
+	-o-transition-delay: 0s;
+	-ms-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+.item:active.laser {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+
+	-webkit-transition-delay: 0s;
+	-moz-transition-delay: 0s;
+	-o-transition-delay: 0s;
+	-ms-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+.item:hover .claser {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+
+	-webkit-transition-delay: 0s;
+	-moz-transition-delay: 0s;
+	-o-transition-delay: 0s;
+	-ms-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+.item:active.claser {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+
+	-webkit-transition-delay: 0s;
+	-moz-transition-delay: 0s;
+	-o-transition-delay: 0s;
+	-ms-transition-delay: 0s;
+	transition-delay: 0s;
+}
+</style>
