@@ -12,6 +12,7 @@
  <meta property="og:site_name" content="mjplay-v.16mb.com" />
  <title>MJ Play-V</title>
  <link rel="shortcut icon" href="./imagenes/icono.ico" />
+ <link href="./css/principal/style.css" rel="stylesheet" />
  <script type="text/javascript" src="http://contadores.miarroba.es/ver.php?id=663707"></script>
 <script type="text/javascript">
   var _gaq = _gaq || [];
@@ -29,15 +30,31 @@
  <![endif]--> 
     </head>
  <body>
-        
+               <article id="cf4a">  
+                <img alt="rojo" src="./imagenes/ojos/ojosrojos.jpg" />            
+                <img alt="verde" src="./imagenes/ojos/ojosverdes.jpg" />     
+                <img alt="azul" src="./imagenes/ojos/ojosazules.jpg" /> 
+                <img alt="cafe" src="./imagenes/ojos/ojoscafes.jpg" /> 
+                <section id="imghtml"><img alt="html5" src="./imagenes/ojos/html.png" /></section> 
+                <section id="imgcss"><img alt="css3" src="./imagenes/ojos/css.png" /></section> 
+                <section id="imgjs"><img alt="css3" src="./imagenes/ojos/JS.png" /></section> 
+                <h6  id="title">MJPlay-V</h6> 
+               </article>       
     </body>
 </html>
 <style>
-    html { 
+ html { 
     background: url(./imagenes/cristalazul.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
+    #cf4a {
+        background-color: #000;
+        border: solid 2px;
+        height: 150px;
+        text-align: center;
+        width: 200px;
+    }
 </style>
