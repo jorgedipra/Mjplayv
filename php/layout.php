@@ -11,7 +11,8 @@
  <meta property="og:image" content="https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-prn1/561117_277654852340416_780149522_n.jpg" />
  <meta property="og:site_name" content="mjplay-v.16mb.com" />
  <title>MJ Play-V</title>
- <link rel="shortcut icon" href="./imagenes/icono.ico" />
+ <link rel="shortcut icon" href="../imagenes/icono.ico" />
+ <link href="../css/principal/style.css" rel="stylesheet" />
  <script type="text/javascript" src="http://contadores.miarroba.es/ver.php?id=663707"></script>
 <script type="text/javascript">
   var _gaq = _gaq || [];
@@ -29,15 +30,67 @@
  <![endif]--> 
     </head>
  <body>
-        
+               <article id="cf4a">  
+                <img alt="rojo" src="../imagenes/ojos/ojosrojos.jpg" />            
+                <img alt="verde" src="../imagenes/ojos/ojosverdes.jpg" />     
+                <img alt="azul" src="../imagenes/ojos/ojosazules.jpg" /> 
+                <img alt="cafe" src="../imagenes/ojos/ojoscafes.jpg" /> 
+                <section id="imghtml"><img alt="html5" src="../imagenes/ojos/html.png" /></section> 
+                <section id="imgcss"><img alt="css3" src="../imagenes/ojos/css.png" /></section> 
+                <section id="imgjs"><img alt="css3" src="../imagenes/ojos/JS.png" /></section> 
+                <h6  id="title">MJPlay-V</h6> 
+               </article>       
     </body>
 </html>
 <style>
-    html { 
-    background: url(./imagenes/cristalazul.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    
+ ::selection{
+color:#fff;
+text-shadow:0 0 5px #fff,             
+            0 0 10px #fff,            
+            0 0 15px #fff,             
+            0 0 20px #4A2EFF,
+            0 0 30px #4A2EFF,       
+            0 0 40px #4A2EFF,             
+            0 0 50px #4A2EFF,             
+            0 0 75px #4A2EFF;
+letter-spacing:5px;
 }
+::-moz-selection{
+color:#fff;
+text-shadow:0 0 5px #fff,             
+            0 0 10px #fff,            
+            0 0 15px #fff,             
+            0 0 20px #4A2EFF,
+            0 0 30px #4A2EFF,       
+            0 0 40px #4A2EFF,             
+            0 0 50px #4A2EFF,             
+            0 0 75px #4A2EFF;
+letter-spacing:5px;
+}   
+ html { 
+    background: url(../imagenes/cristalazul.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+}
+    #cf4a {
+    background-color: #fff;
+    border-top: solid 20px #fff;
+    border-bottom: solid 5px #fff;
+    border-left: solid 10px #fff;
+    border-right: solid 10px #fff; 
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+        -o-border-radius: 50%;
+            border-radius: 50%;
+    height:145px;
+    left: 40%;
+    right: 40%;
+    position: absolute;
+    top: 50px;
+    width:175px;
+    }
+    
 </style>
